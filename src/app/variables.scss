@@ -1,3 +1,16 @@
 $background: #f7f5f3;
 $darkText: #000;
 $clearText: #f7f5f3;
+
+@font-face {
+  font-family: "banska";
+  src: url(../../public/assets/fonts/BANSKA-BYSTRICA.OTF);
+}
+
+@font-face {
+  font-family: "satoshi-regular";
+  src: url(../../public/assets/fonts/Satoshi-Regular.otf);
+}
+
+$banska: banska, serif;
+$satoshi: satoshi-regular, sans-serif;
