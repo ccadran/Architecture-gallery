@@ -16,41 +16,51 @@ const images = [
 
 export default function Loader() {
   const imageRefs = useRef([]);
+  const imageContainer = useRef();
 
   useLayoutEffect(() => {
-    const timeline = gsap.timeline({ defaults: { delay: 0 } });
+    const timelineImage = gsap.timeline({
+      defaults: { delay: 0, ease: "power3.inOut" },
+    });
 
-    timeline.to(
-      imageRefs.current[0],
-      { top: "50%", transform: "translateY(-50%)" },
-      0.2
-    );
-    timeline.to(
+    timelineImage.to(imageRefs.current[0], {
+      top: "50vh",
+      transform: "translateY(-50%)",
+    });
+    timelineImage.to(
       imageRefs.current[1],
-      { top: "50%", transform: "translateY(-50%)" },
+      { top: "50vh", transform: "translateY(-50%)" },
+      0.25
+    );
+    timelineImage.to(
+      imageRefs.current[2],
+      { top: "50vh", transform: "translateY(-50%)" },
       0.5
     );
-    timeline.to(
-      imageRefs.current[2],
-      { top: "50%", transform: "translateY(-50%)" },
+    timelineImage.to(
+      imageRefs.current[3],
+      { top: "50vh", transform: "translateY(-50%)" },
       0.75
     );
-    timeline.to(
-      imageRefs.current[3],
-      { top: "50%", transform: "translateY(-50%)" },
-      0.85
-    );
-    timeline.to(
+    timelineImage.to(
       imageRefs.current[4],
-      { top: "50%", transform: "translateY(-50%)" },
-      0.9
+      { top: "50vh", transform: "translateY(-50%)" },
+      1
     );
+    timelineImage.to(imageRefs.current, {
+      top: "30vh",
+      transform: "rotate(-20deg)",
+    });
+
+    const timelineContainerImage = gsap.timeline();
+
+    timelineContainerImage.to(imageContainer.current, { x: "150%" }, 2);
   });
 
   return (
     <div className={styles.loader}>
       <h1>Architecture</h1>
-      <div className={styles.imageContainer}>
+      <div className={styles.imageContainer} ref={imageContainer}>
         {images.map((image, index) => (
           <Image
             src={image}

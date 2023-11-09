@@ -8,8 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   h1 {
     font-size: 144px;
+    opacity: 0;
   }
 
   .imageContainer {
