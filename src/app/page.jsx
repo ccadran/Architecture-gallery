@@ -13,7 +13,11 @@ export default function Home() {
         <Content />
       </div>
       <div className={styles.nextContent}>
-        <h1>test</h1>
+        <img
+          src="/assets/images/blobism.jpg"
+          className={styles.nextImage}
+          objectFit="cover"
+        />
       </div>
     </main>
   );

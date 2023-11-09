@@ -2,20 +2,18 @@
 .loader {
   height: 100vh;
   width: 100%;
-  background-color: $background;
+  background-color: $darkText;
   position: absolute;
   z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  // clip-path: circle(50% at 50% 50%);
-  // clip-path: inset(0% 0% 0% 0%);
-
   mask-image: radial-gradient(circle, transparent 0%, transparent 0%, black 0%);
   h1 {
     font-size: 144px;
     opacity: 1;
+    color: $clearText;
   }
 
   .imageContainer {
@@ -25,7 +23,7 @@
     position: absolute;
     justify-content: space-between;
     width: 80%;
-    background-color: $background;
+    background-color: $darkText;
 
     margin: 0 auto;
     .image {

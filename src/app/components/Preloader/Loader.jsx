@@ -75,6 +75,7 @@ export default function Loader() {
       {
         maskImage:
           " radial-gradient(circle,transparent 0%,transparent 100%,black 100%)",
+        ease: "power3.inOut",
       },
       3
     );
