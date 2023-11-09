@@ -13,15 +13,17 @@
   }
 
   .imageContainer {
-    height: 50%;
+    height: 100%;
     width: 100vw;
     display: flex;
     position: absolute;
     justify-content: space-between;
-    align-items: center;
     width: 80%;
     margin: 0 auto;
     .image {
+      position: sticky;
+      top: 0%;
+      transform: translateY(-100%);
       object-fit: cover;
     }
   }
