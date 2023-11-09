@@ -5,6 +5,7 @@ import Image from "next/image";
 import { imageDown } from "./anim";
 import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const images = [
   "/assets/images/blobism.jpg",
@@ -17,53 +18,71 @@ const images = [
 export default function Loader() {
   const imageRefs = useRef([]);
   const imageContainer = useRef();
+  const container = useRef();
+  const h1 = useRef();
 
   useLayoutEffect(() => {
-    const timelineImage = gsap.timeline({
+    const timelineLoading = gsap.timeline({
       defaults: { delay: 0, ease: "power3.inOut" },
     });
 
-    timelineImage.to(imageRefs.current[0], {
+    timelineLoading.to(imageRefs.current[0], {
       top: "50vh",
       transform: "translateY(-50%)",
     });
-    timelineImage.to(
+    timelineLoading.to(
       imageRefs.current[1],
       { top: "50vh", transform: "translateY(-50%)" },
       0.25
     );
-    timelineImage.to(
+    timelineLoading.to(
       imageRefs.current[2],
       { top: "50vh", transform: "translateY(-50%)" },
       0.5
     );
-    timelineImage.to(
+    timelineLoading.to(
       imageRefs.current[3],
       { top: "50vh", transform: "translateY(-50%)" },
       0.75
     );
-    timelineImage.to(
+    timelineLoading.to(
       imageRefs.current[4],
       { top: "50vh", transform: "translateY(-50%)" },
       1
     );
-    timelineImage.to(imageRefs.current, {
-      top: "30vh",
-      transform: "rotate(-20deg)",
-    });
-
-    const timelineContainerImage = gsap.timeline();
-
-    timelineContainerImage.to(
+    timelineLoading.to(
+      imageRefs.current,
+      {
+        top: "30vh",
+        transform: "rotate(-20deg)",
+      },
+      1.5
+    );
+    timelineLoading.to(
       imageContainer.current,
       { x: "150%", duration: 1, ease: "power3.inOut" },
-      2
+      1.8
+    );
+    timelineLoading.to(
+      h1.current,
+      {
+        opacity: 0,
+      },
+      2.6
+    );
+    gsap.to(
+      container.current,
+      {
+        maskImage:
+          " radial-gradient(circle,transparent 0%,transparent 100%,black 100%)",
+      },
+      3
     );
   });
 
   return (
-    <div className={styles.loader}>
-      <h1>Architecture</h1>
+    <div className={styles.loader} ref={container}>
+      <h1 ref={h1}>Architecture</h1>
       <div className={styles.imageContainer} ref={imageContainer}>
         {images.map((image, index) => (
           <Image
