@@ -1,0 +1,22 @@
+[
+  {
+    "src": "/assets/images/blobism.jpg",
+    "short-description": "Ceci est la première src avec un texte descriptif."
+  },
+  {
+    "src": "/assets/images/brutalism.jpg",
+    "short-description": "Voici la deuxième src avec son texte descriptif."
+  },
+  {
+    "src": "/assets/images/high-tech.jpg",
+    "short-description": "La troisième src a également un texte descriptif ici."
+  },
+  {
+    "src": "/assets/images/metabolism.jpg",
+    "short-description": "C'est la quatrième src avec un texte descriptif associé."
+  },
+  {
+    "src": "/assets/images/modernist.jpg",
+    "short-description": "Enfin, voici la cinquième src et son texte descriptif."
+  }
+]

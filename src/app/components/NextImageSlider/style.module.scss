@@ -1,0 +1,20 @@
+.nextImageSlider {
+  // display: flex;
+  position: relative;
+  // justify-content: center;
+  width: 50vw;
+  height: 100vh;
+}
+
+.nextImageContainer {
+  width: 100%;
+  background-color: black;
+
+  height: 100vh;
+
+  .nextImage {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+}
