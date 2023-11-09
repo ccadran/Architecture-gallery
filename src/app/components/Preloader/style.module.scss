@@ -9,6 +9,15 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  // clip-path: circle(50% at 50% 50%);
+  // clip-path: inset(0% 0% 0% 0%);
+
+  mask-image: radial-gradient(
+    circle,
+    transparent 0%,
+    transparent 25%,
+    black 25%
+  );
   h1 {
     font-size: 144px;
     opacity: 1;
