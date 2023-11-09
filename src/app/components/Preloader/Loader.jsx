@@ -54,7 +54,11 @@ export default function Loader() {
 
     const timelineContainerImage = gsap.timeline();
 
-    timelineContainerImage.to(imageContainer.current, { x: "150%" }, 2);
+    timelineContainerImage.to(
+      imageContainer.current,
+      { x: "150%", duration: 1, ease: "power3.inOut" },
+      2
+    );
   });
 
   return (

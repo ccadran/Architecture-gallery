@@ -11,7 +11,7 @@
   overflow: hidden;
   h1 {
     font-size: 144px;
-    opacity: 0;
+    opacity: 1;
   }
 
   .imageContainer {
@@ -21,6 +21,8 @@
     position: absolute;
     justify-content: space-between;
     width: 80%;
+    background-color: $background;
+
     margin: 0 auto;
     .image {
       position: sticky;
