@@ -6,40 +6,41 @@ import styles from "./style.module.scss";
 
 export default function NextImageSlider({ content }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAnimated, setIsAnimated] = useState(false);
 
   const nextSlide = () => {
-    if (!isAnimated) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === content.length - 1 ? 0 : prevIndex + 1
-      );
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex === content.length - 1 ? 0 : prevIndex + 1
+    );
+
+    // Ajustez le zIndex
+    gsap.set(`.${styles.prev}`, { zIndex: 1 });
+    gsap.set(`.${styles.next}`, { zIndex: 2 });
   };
 
   const prevSlide = () => {
-    if (!isAnimated) {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? content.length - 1 : prevIndex - 1
-      );
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? content.length - 1 : prevIndex - 1
+    );
+
+    // Ajustez le zIndex
+    gsap.set(`.${styles.prev}`, { zIndex: 2 });
+    gsap.set(`.${styles.next}`, { zIndex: 1 });
   };
 
   useEffect(() => {
     const tlNext = gsap.timeline({});
+    const tlPrev = gsap.timeline({});
+    const tlCurrent = gsap.timeline({});
 
     tlNext
-      .set(`.${styles.next}`, { opacity: 1 })
+      .set(`.${styles.next}`, { opacity: 1, x: 0 })
       .to(`.${styles.next}`, { x: "100%", scale: 1 }, 0)
       .set(`.${styles.next}`, { opacity: 0 }, 1);
 
-    const tlPrev = gsap.timeline({});
-
     tlPrev
-      .set(`.${styles.prev}`, { opacity: 1 })
+      .set(`.${styles.prev}`, { opacity: 1, x: 0 })
       .to(`.${styles.prev}`, { x: "-110%", scale: 1.2 }, 0)
       .set(`.${styles.prev}`, { opacity: 0 }, 1);
-
-    const tlCurrent = gsap.timeline({});
 
     tlCurrent
       .set(`.${styles.current}`, { opacity: 1 })
@@ -47,14 +48,8 @@ export default function NextImageSlider({ content }) {
 
     const timeline = gsap.timeline({
       delay: 0,
-      onComplete: () => {
-        setIsAnimated(false);
-      },
     });
-    timeline
-      .add(tlCurrent)
-      .add(tlNext, 0) // Animation suivante
-      .add(tlPrev, 0);
+    timeline.add(tlCurrent).add(tlPrev, 0).add(tlNext, 0);
   }, [currentIndex]);
 
   return (
@@ -88,12 +83,8 @@ export default function NextImageSlider({ content }) {
           );
         })}
       </div>
-      <button onClick={prevSlide} disabled={isAnimated}>
-        Previous
-      </button>
-      <button onClick={nextSlide} disabled={isAnimated}>
-        Next
-      </button>
+      <button onClick={prevSlide}>Previous</button>
+      <button onClick={nextSlide}>Next</button>
     </div>
   );
 }
