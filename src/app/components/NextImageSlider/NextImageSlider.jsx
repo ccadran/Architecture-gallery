@@ -19,9 +19,14 @@ export default function NextImageSlider({ content }) {
   };
 
   useEffect(() => {
-    gsap.to(`.${styles.next}`, { x: "-100%" });
-    gsap.to(`.${styles.prev}`, { x: "100%" });
-    gsap.to(`.${styles.current}`, { x: 0 });
+    const timeline = gsap.timeline({
+      delay: 0,
+    });
+
+    timeline
+      .to(`.${styles.next}`, { x: "100%", scale: 1 })
+      .to(`.${styles.prev}`, { x: "-120%", scale: 1.2 }, 0)
+      .to(`.${styles.current}`, { x: 0, scale: 1 }, 0);
   }, [currentIndex]);
 
   return (
