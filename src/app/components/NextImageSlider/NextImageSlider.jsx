@@ -25,20 +25,36 @@ export default function NextImageSlider({ content }) {
   };
 
   useEffect(() => {
+    const tlNext = gsap.timeline({});
+
+    tlNext
+      .set(`.${styles.next}`, { opacity: 1 })
+      .to(`.${styles.next}`, { x: "100%", scale: 1 }, 0)
+      .set(`.${styles.next}`, { opacity: 0 }, 1);
+
+    const tlPrev = gsap.timeline({});
+
+    tlPrev
+      .set(`.${styles.prev}`, { opacity: 1 })
+      .to(`.${styles.prev}`, { x: "-110%", scale: 1.2 }, 0)
+      .set(`.${styles.prev}`, { opacity: 0 }, 1);
+
+    const tlCurrent = gsap.timeline({});
+
+    tlCurrent
+      .set(`.${styles.current}`, { opacity: 1 })
+      .to(`.${styles.current}`, { scale: 1, x: 0 }, 0);
+
     const timeline = gsap.timeline({
       delay: 0,
       onComplete: () => {
         setIsAnimated(false);
       },
     });
-
     timeline
-      .to(`.${styles.current}`, { x: 0, scale: 1, opacity: 1 }, 0) // Animation actuelle
-      .to(`.${styles.prev}`, { x: "-110%", scale: 1.2, opacity: 1 }, 0) // Animation précédente
-      .to(`.${styles.next}`, { x: "100%", scale: 1, opacity: 1 }); // Animation suivante
-
-    gsap.set(`.${styles.next}`, { opacity: 0 }); // Cacher la prochaine image avant l'animation
-    // gsap.set(`.${styles.prev}`, { opacity: 0 }, 1); // Cacher l'image précédente avant l'animation
+      .add(tlCurrent)
+      .add(tlNext, 0) // Animation suivante
+      .add(tlPrev, 0);
   }, [currentIndex]);
 
   return (
