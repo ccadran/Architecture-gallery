@@ -1,7 +1,8 @@
 "use client";
+
 import { useEffect, useState } from "react";
-import styles from "./style.module.scss";
 import gsap from "gsap";
+import styles from "./style.module.scss";
 
 export default function NextImageSlider({ content }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -24,9 +25,12 @@ export default function NextImageSlider({ content }) {
     });
 
     timeline
-      .to(`.${styles.next}`, { x: "100%", scale: 1 })
-      .to(`.${styles.prev}`, { x: "-120%", scale: 1.2 }, 0)
-      .to(`.${styles.current}`, { x: 0, scale: 1 }, 0);
+      .to(`.${styles.current}`, { x: 0, scale: 1, opacity: 1 }, 0) // Animation actuelle
+      .to(`.${styles.prev}`, { x: "-110%", scale: 1.2, opacity: 1 }, 0) // Animation précédente
+      .to(`.${styles.next}`, { x: "100%", scale: 1, opacity: 1 }); // Animation suivante
+
+    gsap.set(`.${styles.next}`, { opacity: 0 }); // Cacher la prochaine image avant l'animation
+    gsap.set(`.${styles.prev}`, { opacity: 0 }); // Cacher l'image précédente avant l'animation
   }, [currentIndex]);
 
   return (
@@ -45,9 +49,9 @@ export default function NextImageSlider({ content }) {
                 isCurrent
                   ? styles.current
                   : isNext
-                  ? styles.next
+                  ? `${styles.next} ` // Ajoutez la classe visible pour montrer la prochaine image
                   : isPrev
-                  ? styles.prev
+                  ? `${styles.prev} ` // Ajoutez la classe visible pour montrer l'image précédente
                   : ""
               }`}
             >
