@@ -20,20 +20,15 @@
   &.current {
     opacity: 1;
 
-    // transform: translateX(0);
     object-fit: cover;
   }
 
   &.next {
-    // opacity: 1;
     object-fit: cover;
-    // transform: translateX(100%);
   }
 
   &.prev {
     object-fit: cover;
-    // opacity: 1;
-    // transform: translateX(-100%);
   }
 
   .nextImage {
