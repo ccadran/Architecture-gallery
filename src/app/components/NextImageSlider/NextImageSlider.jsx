@@ -6,22 +6,30 @@ import styles from "./style.module.scss";
 
 export default function NextImageSlider({ content }) {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimated, setIsAnimated] = useState(false);
 
   const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === content.length - 1 ? 0 : prevIndex + 1
-    );
+    if (!isAnimated) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === content.length - 1 ? 0 : prevIndex + 1
+      );
+    }
   };
 
   const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? content.length - 1 : prevIndex - 1
-    );
+    if (!isAnimated) {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? content.length - 1 : prevIndex - 1
+      );
+    }
   };
 
   useEffect(() => {
     const timeline = gsap.timeline({
       delay: 0,
+      onComplete: () => {
+        setIsAnimated(false);
+      },
     });
 
     timeline
@@ -30,7 +38,7 @@ export default function NextImageSlider({ content }) {
       .to(`.${styles.next}`, { x: "100%", scale: 1, opacity: 1 }); // Animation suivante
 
     gsap.set(`.${styles.next}`, { opacity: 0 }); // Cacher la prochaine image avant l'animation
-    gsap.set(`.${styles.prev}`, { opacity: 0 }); // Cacher l'image précédente avant l'animation
+    // gsap.set(`.${styles.prev}`, { opacity: 0 }, 1); // Cacher l'image précédente avant l'animation
   }, [currentIndex]);
 
   return (
@@ -64,8 +72,12 @@ export default function NextImageSlider({ content }) {
           );
         })}
       </div>
-      <button onClick={prevSlide}>Previous</button>
-      <button onClick={nextSlide}>Next</button>
+      <button onClick={prevSlide} disabled={isAnimated}>
+        Previous
+      </button>
+      <button onClick={nextSlide} disabled={isAnimated}>
+        Next
+      </button>
     </div>
   );
 }
