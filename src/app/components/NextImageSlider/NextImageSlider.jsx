@@ -1,15 +1,62 @@
+"use client";
+import { useEffect, useState } from "react";
 import styles from "./style.module.scss";
+import gsap from "gsap";
 
 export default function NextImageSlider({ content }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === content.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? content.length - 1 : prevIndex - 1
+    );
+  };
+
+  useEffect(() => {
+    gsap.to(`.${styles.next}`, { x: "-100%" });
+    gsap.to(`.${styles.prev}`, { x: "100%" });
+    gsap.to(`.${styles.current}`, { x: 0 });
+  }, [currentIndex]);
+
   return (
-    <div className={styles.nextImageSlider}>
-      {content.map((item, index) => {
-        return (
-          <div className={styles.nextImageContainer}>
-            <img src={item.src} className={styles.nextImage} />
-          </div>
-        );
-      })}
+    <div className={styles.sliderContainer}>
+      <div className={styles.nextImageSlider}>
+        {content.map((item, index) => {
+          const isCurrent = index === currentIndex;
+          const isNext = index === (currentIndex + 1) % content.length;
+          const isPrev =
+            index === (currentIndex - 1 + content.length) % content.length;
+
+          return (
+            <div
+              key={index}
+              className={`${styles.nextImageContainer} ${
+                isCurrent
+                  ? styles.current
+                  : isNext
+                  ? styles.next
+                  : isPrev
+                  ? styles.prev
+                  : ""
+              }`}
+            >
+              <img
+                src={item.src}
+                alt={`slide-${index}`}
+                className={styles.nextImage}
+              />
+            </div>
+          );
+        })}
+      </div>
+      <button onClick={prevSlide}>Previous</button>
+      <button onClick={nextSlide}>Next</button>
     </div>
   );
 }

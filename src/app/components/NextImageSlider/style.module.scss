@@ -1,16 +1,38 @@
-.nextImageSlider {
-  // display: flex;
+.sliderContainer {
   position: relative;
-  // justify-content: center;
+}
+
+.nextImageSlider {
   width: 50vw;
   height: 100vh;
+  display: flex;
+  overflow: hidden;
+  position: relative;
 }
 
 .nextImageContainer {
-  width: 100%;
-  background-color: black;
+  position: absolute;
 
+  width: 100%;
   height: 100vh;
+  opacity: 1;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.5s ease;
+
+  &.current {
+    opacity: 1;
+    // transform: translateX(0);
+  }
+
+  &.next {
+    opacity: 1;
+    // transform: translateX(100%);
+  }
+
+  &.prev {
+    opacity: 1;
+    // transform: translateX(-100%);
+  }
 
   .nextImage {
     object-fit: cover;
