@@ -38,8 +38,8 @@ export default function Description() {
       scrollTrigger: {
         trigger: descriptionRef.current,
         scrub: true,
-        start: "85% top",
-        end: "bottom bottom",
+        start: "80% top",
+        end: "bottom+=100px bottom",
         markers: true,
       },
     });
