@@ -17,9 +17,6 @@ export default function Description() {
       `.${styles.descriptionText} span`
     );
 
-    // Initial state (hide spans)
-    // gsap.set(descriptionTextSpans, { opacity: 0 });
-
     gsap.to(descriptionTextSpans, {
       opacity: 1,
       fontWeight: 700,
@@ -28,11 +25,33 @@ export default function Description() {
       scrollTrigger: {
         trigger: descriptionRef.current,
         start: "top top", // Adjust the start position as needed
-        end: "bottom bottom", // Adjust the end position as needed
+        end: "65% bottom", // Adjust the end position as needed
         scrub: true, // Smooth scrolling effect
       },
     });
   }, [descriptionSplit]);
+
+  const imageFull = useRef(null);
+  useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: descriptionRef.current,
+        scrub: true,
+        start: "85% top",
+        end: "bottom bottom",
+        markers: true,
+      },
+    });
+
+    timeline.fromTo(
+      imageFull.current,
+      {
+        clipPath: "inset(15%)",
+      },
+      { ease: "power3.in", duration: 3, clipPath: "inset(0%)" }
+    );
+  }, []);
 
   return (
     <div ref={descriptionRef} className={styles.descriptionContainer}>
@@ -43,6 +62,22 @@ export default function Description() {
             <span key={index}>{child}</span>
           ))}
         </p>
+      </div>
+      <div className={styles.illustrations}>
+        <div className={styles.images}>
+          <div className={styles.imageContainer}>
+            <img src="/assets/images/blobism.jpg" alt="illustration-1" />
+          </div>
+          <div className={styles.imageContainer}>
+            <img src="/assets/images/metabolism.jpg" alt="illustration-2" />
+          </div>
+          <div className={styles.imageContainer}>
+            <img src="/assets/images/modernist.jpg" alt="illustration-3" />
+          </div>
+        </div>
+        <div ref={imageFull} className={styles.imageFullContainer}>
+          <img src="/assets/images/high-tech.jpg" alt="illustration-3" />
+        </div>
       </div>
     </div>
   );
