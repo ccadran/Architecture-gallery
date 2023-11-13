@@ -55,12 +55,14 @@ export default function Home() {
           isNext={isNext}
         />
         <div className={styles.controller}>
-          <button onClick={prevSlide} disabled={isAnimated}>
-            Previous
-          </button>
-          <button onClick={nextSlide} disabled={isAnimated}>
-            Next
-          </button>
+          <div className={styles.controllerPrev} onClick={prevSlide}>
+            <Image src="/assets/icons/left-arrow.svg" width="25" height="25" />
+            <p>See last one</p>
+          </div>
+          <div className={styles.controllerNext} onClick={nextSlide}>
+            <p>See next one</p>
+            <Image src="/assets/icons/right-arrow.svg" width="25" height="25" />
+          </div>
         </div>
       </div>
       <div className={styles.nextContent}>
