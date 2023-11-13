@@ -22,13 +22,7 @@ export default function Home() {
         prevIndex === content.length - 1 ? 0 : prevIndex + 1
       );
       setIsAnimated(true);
-
       setIsNext(true);
-
-      // Ajustez le zIndex
-      // gsap.set(`.${styles.prev}`, { zIndex: 1 });
-      // gsap.set(`.${styles.next}`, { zIndex: 2 });
-
       setTimeout(() => {
         setIsAnimated(false);
         setIsNext(false);
@@ -44,8 +38,6 @@ export default function Home() {
       setIsAnimated(true);
       setIsPrev(true);
 
-      // Ajustez le zIndex
-
       setTimeout(() => {
         setIsAnimated(false);
         setIsPrev(false);
@@ -56,14 +48,20 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.currentContent}>
         <Nav />
-        <Content />
-        <Controller />
-        <button onClick={prevSlide} disabled={isAnimated}>
-          Previous
-        </button>
-        <button onClick={nextSlide} disabled={isAnimated}>
-          Next
-        </button>
+        <Content
+          content={content}
+          currentIndex={currentIndex}
+          isPrev={isPrev}
+          isNext={isNext}
+        />
+        <div className={styles.controller}>
+          <button onClick={prevSlide} disabled={isAnimated}>
+            Previous
+          </button>
+          <button onClick={nextSlide} disabled={isAnimated}>
+            Next
+          </button>
+        </div>
       </div>
       <div className={styles.nextContent}>
         <NextImageSlider
