@@ -12,6 +12,8 @@ export default function NextImageSlider({
   isPrev,
   isNext,
 }) {
+  const newCurrentIndex = (currentIndex - 1 + content.length) % content.length;
+  console.log(newCurrentIndex);
   useEffect(() => {
     const tlNext = gsap.timeline({});
     const tlPrev = gsap.timeline({});
@@ -71,10 +73,10 @@ export default function NextImageSlider({
     <div className={styles.sliderContainer}>
       <div className={styles.currentImageSlider}>
         {content.map((item, index) => {
-          const isCurrent = index === currentIndex;
-          const isNext = index === (currentIndex + 1) % content.length;
+          const isCurrent = index === newCurrentIndex;
+          const isNext = index === (newCurrentIndex + 1) % content.length;
           const isPrev =
-            index === (currentIndex - 1 + content.length) % content.length;
+            index === (newCurrentIndex - 1 + content.length) % content.length;
 
           return (
             <div
@@ -100,10 +102,10 @@ export default function NextImageSlider({
       </div>
       <div className={styles.infos}>
         <motion.h2 className={styles.title}>
-          {content[currentIndex].title}
+          {content[newCurrentIndex].title}
         </motion.h2>
         <p className={styles.description}>
-          {content[currentIndex].shortDescription}{" "}
+          {content[newCurrentIndex].shortDescription}{" "}
         </p>
       </div>
     </div>
