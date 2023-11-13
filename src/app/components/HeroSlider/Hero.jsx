@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Content from "../MainContent/Content";
+import Content from "./MainContent/Content";
 import content from "../../../content/content.json";
-import NextImageSlider from "../NextImageSlider/NextImageSlider";
+import NextImageSlider from "./NextImageSlider/NextImageSlider";
 import HeroSlider from "../HeroSlider/Hero";
 import styles from "./style.module.scss";
 import Image from "next/image";
@@ -41,7 +41,7 @@ export default function Hero() {
     }
   };
   return (
-    <>
+    <div className={styles.heroSlider}>
       <div className={styles.currentContent}>
         <Content
           content={content}
@@ -68,6 +68,6 @@ export default function Hero() {
           isNext={isNext}
         />
       </div>
-    </>
+    </div>
   );
 }

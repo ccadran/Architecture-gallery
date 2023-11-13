@@ -5,6 +5,7 @@ import styles from "./page.module.scss";
 import Nav from "./components/Nav/Nav";
 import content from "../content/content.json";
 import HeroSlider from "./components/HeroSlider/Hero";
+import Description from "./components/Description/Description";
 import gsap from "gsap";
 import { useState } from "react";
 
@@ -13,6 +14,7 @@ export default function Home() {
     <main className={styles.main}>
       <Nav />
       <HeroSlider />
+      <Description />
     </main>
   );
 }
