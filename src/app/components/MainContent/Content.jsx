@@ -17,15 +17,21 @@ export default function NextImageSlider({
     const tlPrev = gsap.timeline({});
     const tlCurrent = gsap.timeline({});
     const tlTitle = gsap.timeline({});
+    const tlDescription = gsap.timeline({});
 
-    tlTitle
-      .to(`.${styles.title}`, { opacity: 0 })
-      .fromTo(
-        `.${styles.title}`,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0 },
-        0.25
-      ); // Adjust the duration and delay as needed
+    tlTitle.fromTo(
+      `.${styles.title}`,
+      { opacity: 0, y: 40 },
+      { opacity: 1, y: 0 },
+      0.5
+    ); // Adjust the duration and delay as needed
+
+    tlDescription.fromTo(
+      `.${styles.description}`,
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0 },
+      0.25
+    );
 
     if (isPrev) {
       gsap.set(`.${styles.prev}`, { zIndex: 1 });
@@ -53,7 +59,12 @@ export default function NextImageSlider({
     const timeline = gsap.timeline({
       delay: 0,
     });
-    timeline.add(tlCurrent).add(tlPrev, 0).add(tlNext, 0).add(TitleIn, 0);
+    timeline
+      .add(tlCurrent)
+      .add(tlPrev, 0)
+      .add(tlNext, 0)
+      .add(tlDescription, 0)
+      .add(TitleIn, 0.2);
   }, [currentIndex]);
 
   return (
@@ -87,17 +98,13 @@ export default function NextImageSlider({
           );
         })}
       </div>
-      <div className={styles.description}>
-        <motion.h2
-          variants={TitleIn}
-          // animate="enter"
-          // exit="exit"
-          // initial="initial"
-          className={styles.title}
-        >
+      <div className={styles.infos}>
+        <motion.h2 className={styles.title}>
           {content[currentIndex].title}
         </motion.h2>
-        <p>{content[currentIndex].shortDescription} </p>
+        <p className={styles.description}>
+          {content[currentIndex].shortDescription}{" "}
+        </p>
       </div>
     </div>
   );
