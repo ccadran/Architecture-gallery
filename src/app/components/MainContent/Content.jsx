@@ -3,6 +3,8 @@
 import { useEffect, useState } from "react";
 import gsap from "gsap";
 import styles from "./style.module.scss";
+import { motion } from "framer-motion";
+import { TitleIn } from "./anim";
 
 export default function NextImageSlider({
   content,
@@ -14,6 +16,16 @@ export default function NextImageSlider({
     const tlNext = gsap.timeline({});
     const tlPrev = gsap.timeline({});
     const tlCurrent = gsap.timeline({});
+    const tlTitle = gsap.timeline({});
+
+    tlTitle
+      .to(`.${styles.title}`, { opacity: 0 })
+      .fromTo(
+        `.${styles.title}`,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0 },
+        0.25
+      ); // Adjust the duration and delay as needed
 
     if (isPrev) {
       gsap.set(`.${styles.prev}`, { zIndex: 1 });
@@ -41,7 +53,7 @@ export default function NextImageSlider({
     const timeline = gsap.timeline({
       delay: 0,
     });
-    timeline.add(tlCurrent).add(tlPrev, 0).add(tlNext, 0);
+    timeline.add(tlCurrent).add(tlPrev, 0).add(tlNext, 0).add(TitleIn, 0);
   }, [currentIndex]);
 
   return (
@@ -74,6 +86,18 @@ export default function NextImageSlider({
             </div>
           );
         })}
+      </div>
+      <div className={styles.description}>
+        <motion.h2
+          variants={TitleIn}
+          // animate="enter"
+          // exit="exit"
+          // initial="initial"
+          className={styles.title}
+        >
+          {content[currentIndex].title}
+        </motion.h2>
+        <p>{content[currentIndex].shortDescription} </p>
       </div>
     </div>
   );

@@ -1,22 +1,27 @@
 [
   {
     "src": "/assets/images/blobism.jpg",
-    "short-description": "Ceci est la première src avec un texte descriptif."
+    "shortDescription": "Ceci est la première src avec un texte descriptif.",
+    "title": "Blobism"
   },
   {
     "src": "/assets/images/brutalism.jpg",
-    "short-description": "Voici la deuxième src avec son texte descriptif."
+    "shortDescription": "Voici la deuxième src avec son texte descriptif.",
+    "title": "Brutalism"
   },
   {
     "src": "/assets/images/high-tech.jpg",
-    "short-description": "La troisième src a également un texte descriptif ici."
+    "shortDescription": "La troisième src a également un texte descriptif ici.",
+    "title": "High Tech"
   },
   {
     "src": "/assets/images/metabolism.jpg",
-    "short-description": "C'est la quatrième src avec un texte descriptif associé."
+    "shortDescription": "C'est la quatrième src avec un texte descriptif associé.",
+    "title": "Metabolism"
   },
   {
     "src": "/assets/images/modernist.jpg",
-    "short-description": "Enfin, voici la cinquième src et son texte descriptif."
+    "shortDescription": "Enfin, voici la cinquième src et son texte descriptif.",
+    "title": "Modernist"
   }
 ]

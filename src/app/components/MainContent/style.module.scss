@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .currentImageSlider {
@@ -20,6 +21,7 @@
   height: 100vh;
   opacity: 0;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
   &.current {
     object-fit: cover;
   }
@@ -36,5 +38,16 @@
     object-fit: cover;
     height: 100%;
     width: 100%;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .title {
+    font-size: 72px;
+    margin-top: 28px;
+    margin-bottom: 14px;
   }
 }
