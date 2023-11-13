@@ -13,7 +13,6 @@ export default function NextImageSlider({
   isNext,
 }) {
   const newCurrentIndex = (currentIndex - 1 + content.length) % content.length;
-  console.log(newCurrentIndex);
   useEffect(() => {
     const tlNext = gsap.timeline({});
     const tlPrev = gsap.timeline({});
@@ -55,18 +54,28 @@ export default function NextImageSlider({
       .set(`.${styles.prev}`, { opacity: 0 }, 1);
 
     tlCurrent
-      .set(`.${styles.current}`, { opacity: 1, zIndex: 2 })
+      .set(`.${styles.current}`, { opacity: 1, zIndex: 2, scale: 1.2 })
       .to(`.${styles.current}`, { scale: 1, x: 0 }, 0);
 
     const timeline = gsap.timeline({
       delay: 0,
     });
-    timeline
-      .add(tlCurrent)
-      .add(tlPrev, 0)
-      .add(tlNext, 0)
-      .add(tlDescription, 0)
-      .add(TitleIn, 0.2);
+    if (isPrev) {
+      console.log("prev");
+      timeline
+        .add(tlCurrent, 0)
+        .add(tlPrev, 0)
+        .add(tlNext, 0)
+        .add(tlDescription, 0)
+        .add(TitleIn, 0.2);
+    } else if (isNext) {
+      timeline
+        .add(tlCurrent, 0.2)
+        .add(tlPrev, 0.2)
+        .add(tlNext, 0.2)
+        .add(tlDescription, 0)
+        .add(TitleIn, 0.2);
+    }
   }, [currentIndex]);
 
   return (

@@ -43,7 +43,11 @@ export default function NextImageSlider({
     const timeline = gsap.timeline({
       delay: 0,
     });
-    timeline.add(tlCurrent).add(tlPrev, 0).add(tlNext, 0);
+    if (isPrev) {
+      timeline.add(tlCurrent, 0.2).add(tlPrev, 0.2).add(tlNext, 0.2);
+    } else if (isNext) {
+      timeline.add(tlCurrent).add(tlPrev, 0).add(tlNext, 0);
+    }
   }, [currentIndex]);
 
   return (
