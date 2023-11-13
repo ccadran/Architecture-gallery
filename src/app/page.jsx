@@ -13,6 +13,8 @@ import { useState } from "react";
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimated, setIsAnimated] = useState(false);
+  const [isNext, setIsNext] = useState(false);
+  const [isPrev, setIsPrev] = useState(false);
 
   const nextSlide = () => {
     if (!isAnimated) {
@@ -21,12 +23,15 @@ export default function Home() {
       );
       setIsAnimated(true);
 
+      setIsNext(true);
+
       // Ajustez le zIndex
-      gsap.set(`.${styles.prev}`, { zIndex: 1 });
-      gsap.set(`.${styles.next}`, { zIndex: 2 });
+      // gsap.set(`.${styles.prev}`, { zIndex: 1 });
+      // gsap.set(`.${styles.next}`, { zIndex: 2 });
 
       setTimeout(() => {
         setIsAnimated(false);
+        setIsNext(false);
       }, 1000);
     }
   };
@@ -37,13 +42,13 @@ export default function Home() {
         prevIndex === 0 ? content.length - 1 : prevIndex - 1
       );
       setIsAnimated(true);
+      setIsPrev(true);
 
       // Ajustez le zIndex
-      gsap.set(`.${styles.prev}`, { zIndex: 2 });
-      gsap.set(`.${styles.next}`, { zIndex: 1 });
 
       setTimeout(() => {
         setIsAnimated(false);
+        setIsPrev(false);
       }, 1000);
     }
   };
@@ -61,7 +66,12 @@ export default function Home() {
         </button>
       </div>
       <div className={styles.nextContent}>
-        <NextImageSlider content={content} currentIndex={currentIndex} />
+        <NextImageSlider
+          content={content}
+          currentIndex={currentIndex}
+          isPrev={isPrev}
+          isNext={isNext}
+        />
       </div>
     </main>
   );

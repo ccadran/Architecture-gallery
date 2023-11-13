@@ -6,11 +6,25 @@ import styles from "./style.module.scss";
 
 // ...
 
-export default function NextImageSlider({ content, currentIndex }) {
+export default function NextImageSlider({
+  content,
+  currentIndex,
+  isPrev,
+  isNext,
+}) {
   useEffect(() => {
     const tlNext = gsap.timeline({});
     const tlPrev = gsap.timeline({});
     const tlCurrent = gsap.timeline({});
+
+    if (isPrev) {
+      gsap.set(`.${styles.prev}`, { zIndex: 1 });
+      gsap.set(`.${styles.next}`, { zIndex: 2 });
+    }
+    if (isNext) {
+      gsap.set(`.${styles.prev}`, { zIndex: 2 });
+      gsap.set(`.${styles.next}`, { zIndex: 1 });
+    }
 
     tlNext
       .set(`.${styles.next}`, { opacity: 1, x: 0 })
@@ -23,7 +37,7 @@ export default function NextImageSlider({ content, currentIndex }) {
       .set(`.${styles.prev}`, { opacity: 0 }, 1);
 
     tlCurrent
-      .set(`.${styles.current}`, { opacity: 1 })
+      .set(`.${styles.current}`, { opacity: 1, zIndex: 2 })
       .to(`.${styles.current}`, { scale: 1, x: 0 }, 0);
 
     const timeline = gsap.timeline({
