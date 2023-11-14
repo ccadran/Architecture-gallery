@@ -2,11 +2,17 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./style.module.scss";
+import { useScroll, motion, useTransform } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Description() {
   const descriptionRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: descriptionRef,
+    offset: ["start end", "end start"],
+  });
+  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
 
   const description =
     "Lorem ipsum dolor sit amet consectetur. Tristique porta mauris at duis bibendum purus nisl aliquet ullamcorper. Scelerisque eget lectus justo nibh libero ultricies scelerisque lectus blandit. Nulla fringilla tincidunt diam malesuada dui. Tellus phasellus id sit pharetra eget. Odio imperdiet nullam eget vel laoreet aliquam tellus.";
@@ -79,6 +85,9 @@ export default function Description() {
           <img src="/assets/images/high-tech.jpg" alt="illustration-3" />
         </div>
       </div>
+      <motion.div style={{ height }} className={styles.circleContainer}>
+        <div className={styles.circle}></div>
+      </motion.div>
     </div>
   );
 }
