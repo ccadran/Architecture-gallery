@@ -14,7 +14,7 @@ export default function Content() {
       sectionRef.current,
       { translateX: 0 },
       {
-        translateX: "-500vw",
+        translateX: "-400vw",
         ease: "none",
         duration: 1,
         scrollTrigger: {
@@ -39,10 +39,14 @@ export default function Content() {
         </div>
         {content.map((item, index) => {
           return (
-            <div className={styles.contentItem} key={index}>
-              <h2>{item.title}</h2>
-
-              <p>{item.description}</p>
+            <div className={styles.itemContainer}>
+              <div className={styles.contentItem} key={index}>
+                <h2>{item.title}</h2>
+                <p>{item.shortDescription}</p>
+                <div className={styles.imgContainer}>
+                  <img src={item.src} alt="" />
+                </div>
+              </div>
             </div>
           );
         })}

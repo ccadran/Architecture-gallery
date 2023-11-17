@@ -13,9 +13,33 @@
     .intro {
       width: 100vw;
     }
-    .contentItem {
-      display: flex;
+    .itemContainer {
       width: 100vw;
+      .contentItem {
+        display: flex;
+        width: 60vw;
+        flex-direction: column;
+        height: 80vh;
+        margin: 42px 72px;
+        justify-content: space-between;
+        h2 {
+          font-size: 54px;
+        }
+        p {
+          font-size: 22px;
+          margin-top: 22px;
+          margin-bottom: 92px;
+        }
+        .imgContainer {
+          width: 60vw;
+          height: 400px;
+          img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
     }
   }
 }
