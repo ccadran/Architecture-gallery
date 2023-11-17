@@ -2,26 +2,31 @@
   {
     "src": "/assets/images/blobism.jpg",
     "shortDescription": "Ceci est la première src avec un texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
-    "title": "Blobism"
+    "title": "Blobism",
+    "color": "#000000"
   },
   {
     "src": "/assets/images/brutalism.jpg",
     "shortDescription": "Voici la deuxième src avec son texte descrVoici la deuxième src avec son texte descriptif.iptif.Voici la deuxième src avec son texte descriptif.",
-    "title": "Brutalism"
+    "title": "Brutalism",
+    "color": "#fff"
   },
   {
     "src": "/assets/images/high-tech.jpg",
     "shortDescription": "La troisième src a également un texte descriptif ici.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
-    "title": "High Tech"
+    "title": "High Tech",
+    "color": "#eeadad"
   },
   {
     "src": "/assets/images/metabolism.jpg",
     "shortDescription": "C'est la quatrième src avec un texte descriptif associé.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
-    "title": "Metabolism"
+    "title": "Metabolism",
+    "color": "#adb5ee"
   },
   {
     "src": "/assets/images/modernist.jpg",
     "shortDescription": "Enfin, voici la cinquième src et son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
-    "title": "Modernist"
+    "title": "Modernist",
+    "color": "#adeecb"
   }
 ]

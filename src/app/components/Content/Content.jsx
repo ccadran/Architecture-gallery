@@ -39,7 +39,10 @@ export default function Content() {
         </div>
         {content.map((item, index) => {
           return (
-            <div className={styles.itemContainer}>
+            <div
+              className={styles.itemContainer}
+              style={{ backgroundColor: item.color }}
+            >
               <div className={styles.contentItem} key={index}>
                 <h2>{item.title}</h2>
                 <p>{item.shortDescription}</p>
