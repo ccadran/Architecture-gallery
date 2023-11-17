@@ -37,28 +37,6 @@ export default function Description() {
     });
   }, [descriptionSplit]);
 
-  // const imageFull = useRef(null);
-  // useLayoutEffect(() => {
-  //   gsap.registerPlugin(ScrollTrigger);
-  //   const timeline = gsap.timeline({
-  //     scrollTrigger: {
-  //       trigger: descriptionRef.current,
-  //       scrub: true,
-  //       start: "80% top",
-  //       end: "bottom+=100px bottom",
-  //       markers: true,
-  //     },
-  //   });
-
-  //   timeline.fromTo(
-  //     imageFull.current,
-  //     {
-  //       clipPath: "inset(15%)",
-  //     },
-  //     { ease: "power3.in", duration: 3, clipPath: "inset(0%)" }
-  //   );
-  // }, []);
-
   return (
     <>
       <div ref={descriptionRef} className={styles.descriptionContainer}>
