@@ -12,7 +12,7 @@ export default function Description() {
     target: descriptionRef,
     offset: ["start end", "end start"],
   });
-  const height = useTransform(scrollYProgress, [0, 0.9], [50, 0]);
+  const height = useTransform(scrollYProgress, [0.9, 1], [50, 0]);
 
   const description =
     "Lorem ipsum dolor sit amet consectetur. Tristique porta mauris at duis bibendum purus nisl aliquet ullamcorper. Scelerisque eget lectus justo nibh libero ultricies scelerisque lectus blandit. Nulla fringilla tincidunt diam malesuada dui. Tellus phasellus id sit pharetra eget. Odio imperdiet nullam eget vel laoreet aliquam tellus.";
@@ -37,57 +37,59 @@ export default function Description() {
     });
   }, [descriptionSplit]);
 
-  const imageFull = useRef(null);
-  useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: descriptionRef.current,
-        scrub: true,
-        start: "80% top",
-        end: "bottom+=100px bottom",
-        markers: true,
-      },
-    });
+  // const imageFull = useRef(null);
+  // useLayoutEffect(() => {
+  //   gsap.registerPlugin(ScrollTrigger);
+  //   const timeline = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger: descriptionRef.current,
+  //       scrub: true,
+  //       start: "80% top",
+  //       end: "bottom+=100px bottom",
+  //       markers: true,
+  //     },
+  //   });
 
-    timeline.fromTo(
-      imageFull.current,
-      {
-        clipPath: "inset(15%)",
-      },
-      { ease: "power3.in", duration: 3, clipPath: "inset(0%)" }
-    );
-  }, []);
+  //   timeline.fromTo(
+  //     imageFull.current,
+  //     {
+  //       clipPath: "inset(15%)",
+  //     },
+  //     { ease: "power3.in", duration: 3, clipPath: "inset(0%)" }
+  //   );
+  // }, []);
 
   return (
-    <div ref={descriptionRef} className={styles.descriptionContainer}>
-      <div className={styles.description}>
-        <h2>L'architecture à travers 5 courants</h2>
-        <p className={styles.descriptionText}>
-          {descriptionSplit.map((child, index) => (
-            <span key={index}>{child}</span>
-          ))}
-        </p>
-      </div>
-      <div className={styles.illustrations}>
-        <div className={styles.images}>
-          <div className={styles.imageContainer}>
-            <img src="/assets/images/blobism.jpg" alt="illustration-1" />
-          </div>
-          <div className={styles.imageContainer}>
-            <img src="/assets/images/metabolism.jpg" alt="illustration-2" />
-          </div>
-          <div className={styles.imageContainer}>
-            <img src="/assets/images/modernist.jpg" alt="illustration-3" />
-          </div>
+    <>
+      <div ref={descriptionRef} className={styles.descriptionContainer}>
+        <div className={styles.description}>
+          <h2>L'architecture à travers 5 courants</h2>
+          <p className={styles.descriptionText}>
+            {descriptionSplit.map((child, index) => (
+              <span key={index}>{child}</span>
+            ))}
+          </p>
         </div>
-        <div ref={imageFull} className={styles.imageFullContainer}>
-          <img src="/assets/images/high-tech.jpg" alt="illustration-3" />
+        <div className={styles.illustrations}>
+          <div className={styles.images}>
+            <div className={styles.imageContainer}>
+              <img src="/assets/images/blobism.jpg" alt="illustration-1" />
+            </div>
+            <div className={styles.imageContainer}>
+              <img src="/assets/images/metabolism.jpg" alt="illustration-2" />
+            </div>
+            <div className={styles.imageContainer}>
+              <img src="/assets/images/modernist.jpg" alt="illustration-3" />
+            </div>
+          </div>
+          {/* <div ref={imageFull} className={styles.imageFullContainer}>
+            <img src="/assets/images/high-tech.jpg" alt="illustration-3" />
+          </div> */}
         </div>
       </div>
       <motion.div style={{ height }} className={styles.circleContainer}>
         <div className={styles.circle}></div>
       </motion.div>
-    </div>
+    </>
   );
 }

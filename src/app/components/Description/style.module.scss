@@ -1,9 +1,11 @@
+@import "../../variables.scss";
+
 .descriptionContainer {
   display: flex;
   flex-direction: column;
   padding: 0 60px;
   margin-top: 122px;
-  height: 740vh;
+  height: 650vh;
   h2 {
     margin-bottom: 112px;
     font-size: 54px;
@@ -48,10 +50,6 @@
       &:nth-child(2) {
         margin-top: 70em;
         z-index: 2;
-        // width: 100vw;
-        // transform: translateX(-60px);
-        // height: 100%;
-        // position: absolute;
       }
       &:nth-child(3) {
         margin-top: -75em;
@@ -73,7 +71,7 @@
 
 .circleContainer {
   position: relative;
-  margin-top: 100px;
+  margin-top: 200px;
   height: 0px;
   .circle {
     box-shadow: 0px 60px 50px rgba(0, 0, 0, 0.748);
@@ -81,7 +79,7 @@
     height: 1550%;
     width: 120%;
     left: -10%;
-    background-color: white;
+    background-color: $background;
     border-radius: 0% 0% 50% 50%;
     z-index: 1;
   }
