@@ -9,7 +9,6 @@ import Description from "./components/Description/Description";
 import Content from "./components/Content/Content";
 import gsap from "gsap";
 import { useState } from "react";
-import CircleTransition from "./components/CircleTransition/CircleTransition";
 
 export default function Home() {
   return (
