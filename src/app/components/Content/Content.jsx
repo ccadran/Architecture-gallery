@@ -14,13 +14,13 @@ export default function Content() {
       sectionRef.current,
       { translateX: 0 },
       {
-        translateX: "-300vw",
+        translateX: "-500vw",
         ease: "none",
         duration: 1,
         scrollTrigger: {
           trigger: triggerRef.current,
           start: "top top",
-          end: "2000 end",
+          end: "5000 end",
           scrub: 0.6,
           pin: true,
         },
@@ -34,10 +34,14 @@ export default function Content() {
   return (
     <div ref={triggerRef} className={styles.contentContainer}>
       <div ref={sectionRef} className={styles.contentSlide}>
+        <div className={styles.intro}>
+          <h1>Discover architectures</h1>
+        </div>
         {content.map((item, index) => {
           return (
             <div className={styles.contentItem} key={index}>
               <h2>{item.title}</h2>
+
               <p>{item.description}</p>
             </div>
           );

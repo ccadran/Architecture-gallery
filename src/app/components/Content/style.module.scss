@@ -10,6 +10,9 @@
     height: 100vh;
     flex-direction: row;
     position: relative;
+    .intro {
+      width: 100vw;
+    }
     .contentItem {
       display: flex;
       width: 100vw;
