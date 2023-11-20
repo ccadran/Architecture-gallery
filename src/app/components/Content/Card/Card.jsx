@@ -5,6 +5,9 @@ export default function Card({ src, title, shortDescription, color }) {
       <div style={{ backgroundColor: color }} className={styles.card}>
         <h2>{title}</h2>
         <p>{shortDescription}</p>
+        <div className={styles.imgContainer}>
+          <img src={src} alt="" />
+        </div>
       </div>
     </div>
   );
