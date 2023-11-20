@@ -10,6 +10,7 @@ import Content from "./components/Content/Content";
 import gsap from "gsap";
 import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
+import Footer from "./components/Footer/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Home() {
       <HeroSlider />
       <Description />
       <Content />
+      <Footer />
     </main>
   );
 }

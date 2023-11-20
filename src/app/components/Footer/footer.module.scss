@@ -1,0 +1,15 @@
+.footerContainer {
+  height: 100vh;
+  position: relative;
+  .footer {
+    background-color: aliceblue;
+  }
+  .footerTransition {
+    background-color: black;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    opacity: 0.5;
+  }
+}
