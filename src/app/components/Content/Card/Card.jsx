@@ -3,29 +3,43 @@ import styles from "./card.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 
-export default function Card({ i, src, title, shortDescription, color }) {
+export default function Card({
+  i,
+  src,
+  title,
+  shortDescription,
+  color,
+  progress,
+  range,
+  targetScale,
+}) {
   const container = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start end", "start start"],
   });
-  const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const imageScale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div ref={container} className={styles.cardContainer}>
-      <div
-        style={{ backgroundColor: color, top: `calc(-10% + ${i * 25}px)` }}
+      <motion.div
+        style={{
+          scale,
+          backgroundColor: color,
+          top: `calc(-10% + ${i * 25}px)`,
+        }}
         className={styles.card}
       >
         <h2>{title}</h2>
         <p>{shortDescription}</p>
         <div className={styles.imgContainer}>
-          <motion.div style={{ scale }} className={styles.inner}>
+          <motion.div style={{ scale: imageScale }} className={styles.inner}>
             <img src={src} alt="image" />
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
