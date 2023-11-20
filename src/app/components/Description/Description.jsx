@@ -65,9 +65,9 @@ export default function Description() {
           </div> */}
         </div>
       </div>
-      {/* <motion.div style={{ height }} className={styles.circleContainer}>
+      <motion.div style={{ height }} className={styles.circleContainer}>
         <div className={styles.circle}></div>
-      </motion.div> */}
+      </motion.div>
     </>
   );
 }

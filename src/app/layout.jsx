@@ -6,12 +6,12 @@ import Preloader from "./components/Preloader/Loader";
 import { AnimatePresence } from "framer-motion";
 
 export default function RootLayout({ children }) {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 3250);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    // }, 3250);
   });
   return (
     <html lang="en">
