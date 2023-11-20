@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import gsap from "gsap";
-import styles from "./style.module.scss";
+import styles from "./content.module.scss";
 import { motion } from "framer-motion";
 import { TitleIn } from "./anim";
 

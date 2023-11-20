@@ -3,7 +3,7 @@ import Content from "./MainContent/Content";
 import content from "../../../content/content.json";
 import NextImageSlider from "./NextImageSlider/NextImageSlider";
 import HeroSlider from "../HeroSlider/Hero";
-import styles from "./style.module.scss";
+import styles from "./hero.module.scss";
 import Image from "next/image";
 
 export default function Hero() {

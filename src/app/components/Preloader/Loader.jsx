@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./style.module.scss";
+import styles from "./loader.module.scss";
 import Image from "next/image";
 import { imageDown } from "./anim";
 import { useLayoutEffect, useRef } from "react";
