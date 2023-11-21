@@ -60,11 +60,16 @@
 
   &.open {
     width: 90vw;
+    .menuOpener {
+      z-index: 13;
+      color: white;
+    }
     .credit {
       display: none;
     }
     .close {
-      z-index: 12;
+      color: white;
+      z-index: 13;
       h4 {
         font-weight: 600;
       }
