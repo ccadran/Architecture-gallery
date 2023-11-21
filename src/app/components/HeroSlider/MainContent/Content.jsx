@@ -119,7 +119,7 @@ export default function NextImageSlider({
         <h2 className={styles.genre}>{content[newCurrentIndex].genre}</h2>
         <h4 className={styles.title}>{content[newCurrentIndex].title}</h4>
         <p className={styles.description}>
-          {content[newCurrentIndex].shortDescription}{" "}
+          {content[newCurrentIndex].shortDescription}
         </p>
       </div>
     </div>
