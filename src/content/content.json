@@ -3,7 +3,8 @@
     "src": "/assets/images/blobism.jpg",
     "shortDescription": "Ceci est la première src avec un texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
-    "title": "Blobism",
+    "title": "Aqua tower",
+    "genre": "Blobism",
     "color": "#1D1E33",
     "author": "Clario"
   },
@@ -12,31 +13,35 @@
     "shortDescription": "Voici la deuxième src avec son texte descrVoici la deuxième src avec son texte descriptif.iptif.Voici la deuxième src avec son texte descriptif.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Brutalism",
+    "genre": "Brutalism",
     "color": "#fff",
-    "author": "Clario"
+    "author": "Kotryna Juskaite"
   },
   {
     "src": "/assets/images/high-tech.jpg",
     "shortDescription": "La troisième src a également un texte descriptif ici.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
-    "title": "High Tech",
+    "title": "Lloyd’s Building",
+    "genre": "High Tech",
     "color": "#eeadad",
-    "author": "Clario"
+    "author": "Max Whitehead"
   },
   {
     "src": "/assets/images/metabolism.jpg",
     "shortDescription": "C'est la quatrième src avec un texte descriptif associé.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
-    "title": "Metabolism",
+    "title": "Nakagin Capsule Tower",
+    "genre": "Metabolism",
     "color": "#adb5ee",
-    "author": "Clario"
+    "author": "Arthur Mazi"
   },
   {
     "src": "/assets/images/modernist.jpg",
     "shortDescription": "Enfin, voici la cinquième src et son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
-    "title": "Modernist",
+    "title": "Brazilian National Congress",
+    "genre": "Modernist",
     "color": "#adeecb",
-    "author": "Clario"
+    "author": "Gustavo Leighton"
   }
 ]
