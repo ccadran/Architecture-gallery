@@ -34,7 +34,9 @@ export default function Footer() {
           })}
         </div>
         <div className={styles.presentation}>
-          <img src="" alt="qr code" />
+          <div className={styles.qrContainer}>
+            <img src="/assets/images/qr-code.png" alt="qr code" />
+          </div>
           <h2>Designed and developed by Clario Cadran</h2>
           <div className={styles.socials}>
             <a href="https://github.com/ccadran">Linkedin</a>
