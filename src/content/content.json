@@ -2,6 +2,7 @@
   {
     "src": "/assets/images/blobism.jpg",
     "shortDescription": "Ceci est la première src avec un texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Blobism",
     "color": "#1D1E33",
     "author": "Clario"
@@ -9,6 +10,7 @@
   {
     "src": "/assets/images/brutalism.jpg",
     "shortDescription": "Voici la deuxième src avec son texte descrVoici la deuxième src avec son texte descriptif.iptif.Voici la deuxième src avec son texte descriptif.",
+    "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Brutalism",
     "color": "#fff",
     "author": "Clario"
@@ -16,6 +18,7 @@
   {
     "src": "/assets/images/high-tech.jpg",
     "shortDescription": "La troisième src a également un texte descriptif ici.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "High Tech",
     "color": "#eeadad",
     "author": "Clario"
@@ -23,6 +26,7 @@
   {
     "src": "/assets/images/metabolism.jpg",
     "shortDescription": "C'est la quatrième src avec un texte descriptif associé.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Metabolism",
     "color": "#adb5ee",
     "author": "Clario"
@@ -30,6 +34,7 @@
   {
     "src": "/assets/images/modernist.jpg",
     "shortDescription": "Enfin, voici la cinquième src et son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Modernist",
     "color": "#adeecb",
     "author": "Clario"

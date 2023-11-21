@@ -8,9 +8,8 @@
   .card {
     position: relative;
     top: -10%;
-    width: 80vw;
+    width: 60vw;
     height: 80vh;
-    // border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -20,22 +19,30 @@
       font-size: 42px;
       margin-bottom: 16px;
     }
+    .content {
+      display: flex;
+      height: 70vh;
+      margin: 24px 0;
+    }
     p {
+      width: 50%;
       font-size: 18px;
+      margin-right: 22px;
     }
     .imgContainer {
-      width: 100%;
-      height: 70%;
+      width: 50%;
+      height: 80%;
       position: relative;
       overflow: hidden;
-      padding-bottom: 46px;
-      margin-top: 26px;
+      // padding-bottom: 46px;
+      // margin-top: 26px;
       .inner {
         width: 100%;
         height: 100%;
       }
       img {
         object-fit: cover;
+        // object-position: center center;
         height: 100%;
         width: 100%;
       }

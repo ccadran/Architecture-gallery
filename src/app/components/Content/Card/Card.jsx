@@ -7,7 +7,7 @@ export default function Card({
   i,
   src,
   title,
-  shortDescription,
+  longDescription,
   color,
   progress,
   range,
@@ -33,11 +33,13 @@ export default function Card({
         className={styles.card}
       >
         <h2>{title}</h2>
-        <p>{shortDescription}</p>
-        <div className={styles.imgContainer}>
-          <motion.div style={{ scale: imageScale }} className={styles.inner}>
-            <img src={src} alt="image" />
-          </motion.div>
+        <div className={styles.content}>
+          <p>{longDescription}</p>
+          <div className={styles.imgContainer}>
+            <motion.div style={{ scale: imageScale }} className={styles.inner}>
+              <img src={src} alt="image" />
+            </motion.div>
+          </div>
         </div>
       </motion.div>
     </div>
