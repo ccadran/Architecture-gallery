@@ -7,6 +7,7 @@ export default function Card({
   i,
   src,
   title,
+  genre,
   longDescription,
   color,
   progress,
@@ -32,7 +33,9 @@ export default function Card({
         }}
         className={styles.card}
       >
-        <h2>{title}</h2>
+        <h2>
+          {title} - <span>{genre}</span>
+        </h2>
         <div className={styles.content}>
           <p>{longDescription}</p>
           <div className={styles.imgContainer}>
