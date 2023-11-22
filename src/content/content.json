@@ -1,7 +1,7 @@
 [
   {
     "src": "/assets/images/blobism.jpg",
-    "shortDescription": "Ceci est la première src avec un texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "shortDescription": "The Aqua Tower, located in Chicago, is an iconic skyscraper designed by architect Jeanne Gang of Studio Gang. Completed in 2010, the building is distinguished by its organic, flowing silhouette, characteristic of the blobism movement, with its cascading balconies.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Aqua tower",
     "genre": "Blobism",
@@ -10,7 +10,7 @@
   },
   {
     "src": "/assets/images/brutalism.jpg",
-    "shortDescription": "Voici la deuxième src avec son texte descrVoici la deuxième src avec son texte descriptif.iptif.Voici la deuxième src avec son texte descriptif.",
+    "shortDescription": "The Barbican Centre in London is a cultural and residential complex designed in the Brutalist style, an architectural movement that emerged in the 1950s and 1960s. Designed by architects Chamberlin, Powell and Bon, the Barbican, completed in 1982, remains one of the most emblematic works of Brutalism.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Barbican Center",
     "genre": "Brutalism",
@@ -19,7 +19,7 @@
   },
   {
     "src": "/assets/images/high-tech.jpg",
-    "shortDescription": "La troisième src a également un texte descriptif ici.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "shortDescription": "The Lloyd's Building in London is an iconic structure designed by architect Richard Rogers. Completed in 1986, it embodies the high-tech architectural movement. The building is distinguished by its bold use of exposed metal structures, external ventilation ducts and modular design.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Lloyd’s Building",
     "genre": "High Tech",
@@ -28,7 +28,7 @@
   },
   {
     "src": "/assets/images/metabolism.jpg",
-    "shortDescription": "C'est la quatrième src avec un texte descriptif associé.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "shortDescription": "The Nakagin Capsule Tower in Tokyo, designed by architect Kisho Kurokawa in 1972, is an emblematic figure of the metabolist movement. This modular tower expresses the Japanese metabolic vision by integrating interchangeable prefabricated capsules, symbolizing the idea of organic growth and constant adaptability in architectural design.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Nakagin Capsule Tower",
     "genre": "Metabolism",
@@ -37,7 +37,7 @@
   },
   {
     "src": "/assets/images/modernist.jpg",
-    "shortDescription": "Enfin, voici la cinquième src et son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.Voici la deuxième src avec son texte descriptif.",
+    "shortDescription": "The Brazilian National Congress, located in Brasilia, is an emblematic building designed by architect Oscar Niemeyer as part of the urban plan for Brazil's new capital, completed in 1960. It is a landmark work of the modernist movement.",
     "longDescription": "Ceci est la longue description bgejbfsdgllllllllll jedsbofffffffffffffffffff fiodbzhiezoffffffffffffff fioebzzzzzzzzzzzzzzzzzzzz fboeziiiiiiiiiiii faibpoooooooooooooo bfeogaziuuuuuuuuu bgfeioazzzzz fboeaguiiiiiiii oifbaeguuuuuuu bofaeguiiiii foeibagggggggggggg ibaefeooooooooooo iofbaeggggggggg ioaebffffffffff",
     "title": "Brazilian National Congress",
     "genre": "Modernist",
