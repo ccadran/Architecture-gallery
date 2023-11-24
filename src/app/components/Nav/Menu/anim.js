@@ -11,7 +11,7 @@ export const menuSlide = {
   exit: {
     y: "-100%",
     x: "-60px",
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
+    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.5 },
   },
 };
 
@@ -44,6 +44,6 @@ export const lineAnim = {
   exit: (i) => ({
     width: "0%",
 
-    transition: { duration: 1, ease: [0, 0.55, 0.45, 1], delay: 0.1 * i },
+    transition: { duration: 1, ease: [0, 0.55, 0.45, 1], delay: 0.3 + 0.1 * i },
   }),
 };
