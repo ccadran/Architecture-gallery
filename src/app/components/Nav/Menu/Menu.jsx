@@ -1,13 +1,13 @@
 import styles from "./menu.module.scss";
 import content from "../../../../content/content.json";
 import { motion } from "framer-motion";
-import { opacity } from "./anim";
+import { menuSlide, textSlide, lineAnim } from "./anim";
 
-export default function Menu({ isOpen }) {
+export default function Menu({}) {
   console.log(content.map((item) => item.genre));
   return (
     <motion.div
-      variants={opacity}
+      variants={menuSlide}
       animate="enter"
       exit="exit"
       initial="initial"
@@ -17,11 +17,25 @@ export default function Menu({ isOpen }) {
         {content.map((item, index) => {
           return (
             <div className={styles.genre}>
-              <div className={styles.text}>
+              <motion.div
+                variants={textSlide}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+                custom={index + 1}
+                className={styles.text}
+              >
                 <p>( {index + 1} )</p>
                 <h2>{item.genre}</h2>
-              </div>
-              <div className={styles.line}></div>
+              </motion.div>
+              <motion.div
+                custom={index + 1}
+                variants={lineAnim}
+                animate="enter"
+                exit="exit"
+                initial="initial"
+                className={styles.line}
+              ></motion.div>
             </div>
           );
         })}
