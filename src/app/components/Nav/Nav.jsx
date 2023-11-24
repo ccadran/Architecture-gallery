@@ -2,6 +2,7 @@ import { useState } from "react";
 import styles from "./nav.module.scss";
 import Menu from "./Menu/Menu";
 import { AnimatePresence } from "framer-motion";
+import { menuSlide } from "./Menu/anim";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -27,7 +28,10 @@ export default function Nav() {
         {isMenuOpen && (
           <div
             className={styles.close}
-            isOpen={isMenuOpen}
+            variants={menuSlide}
+            animate="enter"
+            exit="exit"
+            initial="initial"
             onClick={() => setIsMenuOpen(false)}
           >
             <h4>close</h4>
