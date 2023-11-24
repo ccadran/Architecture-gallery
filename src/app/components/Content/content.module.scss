@@ -1,8 +1,7 @@
 @import "../../variables.scss";
 
 .content {
-  // height: 100vh;
-  background-color: rgb(0, 0, 0);
+  background-color: $background;
   color: white;
   padding-top: 50vh;
   padding-bottom: 25vh;

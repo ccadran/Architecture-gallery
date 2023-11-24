@@ -22,12 +22,17 @@ export default function Nav() {
           <p className={styles.cadran}>Cadran</p>
         </div>
       </div>
-      {isMenuOpen && (
-        <div className={styles.close} onClick={() => setIsMenuOpen(false)}>
-          <h4>close</h4>
-        </div>
-      )}
-      {isMenuOpen && <Menu />}
+      {/* {isMenuOpen && ( */}
+      <div
+        className={styles.close}
+        isOpen={isMenuOpen}
+        onClick={() => setIsMenuOpen(false)}
+      >
+        <h4>close</h4>
+      </div>
+      {/* )} */}
+      {/* {isMenuOpen && <Menu />} */}
+      <Menu />
     </div>
   );
 }

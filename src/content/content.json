@@ -5,7 +5,7 @@
     "longDescription": "The Aqua Tower, situated in Chicago, stands as an iconic skyscraper, a testament to the innovative design prowess of architect Jeanne Gang from Studio Gang. Its completion in 2010 marked a significant contribution to the architectural landscape. The building's distinctive feature lies in its organic and flowing silhouette, a hallmark of the blobism movement. The cascading balconies not only provide a unique aesthetic but also serve as a functional element, creating a dynamic interplay between form and function. The Aqua Tower's design exemplifies a harmonious integration of nature-inspired elements and modern architecture, making it a noteworthy exemplar of the blobism movement and a key player in the evolution of contemporary urban aesthetics.",
     "title": "Aqua tower",
     "genre": "Blobism",
-    "color": "#1D1E33",
+    "color": "##EB1F2F",
     "author": "Pierre Antona"
   },
   {
@@ -14,7 +14,7 @@
     "longDescription": "The Barbican Centre in London, a cultural and residential complex completed in 1982, stands as an iconic example of Brutalist architecture, a movement that emerged in the 1950s and 1960s. Designed by architects Chamberlin, Powell, and Bon, its bold use of exposed concrete, geometric forms, and emphasis on functionality encapsulate the essence of Brutalism. Beyond its architectural significance, the Barbican Centre serves as a dynamic cultural hub, embodying both the movement's aesthetic principles and functional ideals, contributing significantly to Brutalism's enduring legacy in London's architectural landscape.",
     "title": "Barbican Center",
     "genre": "Brutalism",
-    "color": "#fff",
+    "color": "#00A390",
     "author": "Kotryna Juskaite"
   },
   {

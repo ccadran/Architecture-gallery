@@ -1,10 +1,18 @@
 import styles from "./menu.module.scss";
 import content from "../../../../content/content.json";
+import { motion } from "framer-motion";
+import { opacity } from "./anim";
 
-export default function Menu() {
+export default function Menu({ isOpen }) {
   console.log(content.map((item) => item.genre));
   return (
-    <div className={styles.menu}>
+    <motion.div
+      variants={opacity}
+      animate="enter"
+      exit="exit"
+      initial="initial"
+      className={styles.menu}
+    >
       <div className={styles.genres}>
         {content.map((item, index) => {
           return (
@@ -18,6 +26,6 @@ export default function Menu() {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 }
