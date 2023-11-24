@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./nav.module.scss";
 import Menu from "./Menu/Menu";
+import { AnimatePresence } from "framer-motion";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,6 @@ export default function Nav() {
           <p className={styles.cadran}>Cadran</p>
         </div>
       </div>
-      {/* {isMenuOpen && ( */}
       <div
         className={styles.close}
         isOpen={isMenuOpen}
@@ -30,9 +30,7 @@ export default function Nav() {
       >
         <h4>close</h4>
       </div>
-      {/* )} */}
-      {/* {isMenuOpen && <Menu />} */}
-      <Menu />
+      <AnimatePresence mode="wait">{isMenuOpen && <Menu />}</AnimatePresence>
     </div>
   );
 }
