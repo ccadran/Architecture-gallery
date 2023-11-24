@@ -14,6 +14,7 @@ export const menuSlide = {
     transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1] },
   },
 };
+
 export const textSlide = {
   initial: {
     y: "-20%",
@@ -22,16 +23,16 @@ export const textSlide = {
   enter: (i) => ({
     y: "0%",
     opacity: 1,
-
-    transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1], delay: 0.05 * i },
+    transition: { duration: 1, ease: [0.65, 0.05, 0.36, 1], delay: 0.08 * i },
   }),
   exit: (i) => ({
     y: "-100%",
     opacity: 0,
 
-    transition: { duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 * i },
+    transition: { duration: 1, ease: [0.65, 0.05, 0.36, 1], delay: 0.1 * i },
   }),
 };
+
 export const lineAnim = {
   initial: {
     width: "0%",
