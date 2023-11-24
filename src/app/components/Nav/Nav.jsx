@@ -23,13 +23,17 @@ export default function Nav() {
           <p className={styles.cadran}>Cadran</p>
         </div>
       </div>
-      <div
-        className={styles.close}
-        isOpen={isMenuOpen}
-        onClick={() => setIsMenuOpen(false)}
-      >
-        <h4>close</h4>
-      </div>
+      <AnimatePresence mode="wait">
+        {isMenuOpen && (
+          <div
+            className={styles.close}
+            isOpen={isMenuOpen}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <h4>close</h4>
+          </div>
+        )}
+      </AnimatePresence>
       <AnimatePresence mode="wait">{isMenuOpen && <Menu />}</AnimatePresence>
     </div>
   );
