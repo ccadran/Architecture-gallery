@@ -5,7 +5,7 @@
     "longDescription": "The Aqua Tower, situated in Chicago, stands as an iconic skyscraper, a testament to the innovative design prowess of architect Jeanne Gang from Studio Gang. Its completion in 2010 marked a significant contribution to the architectural landscape. The building's distinctive feature lies in its organic and flowing silhouette, a hallmark of the blobism movement. The cascading balconies not only provide a unique aesthetic but also serve as a functional element, creating a dynamic interplay between form and function. The Aqua Tower's design exemplifies a harmonious integration of nature-inspired elements and modern architecture, making it a noteworthy exemplar of the blobism movement and a key player in the evolution of contemporary urban aesthetics.",
     "title": "Aqua tower",
     "genre": "Blobism",
-    "color": "##EB1F2F",
+    "color": "#011936",
     "author": "Pierre Antona"
   },
   {
@@ -41,7 +41,7 @@
     "longDescription": "The Brazilian National Congress, located in Brasília, is an iconic creation by architect Oscar Niemeyer, part of the city's 1960 urban plan. Completed in 1960, it stands as a landmark of modernist architecture, characterized by clean lines and geometric simplicity. Niemeyer's design reflects the movement's commitment to progress, functionality, and a departure from traditional ornamentation, making the Brazilian National Congress a significant symbol of modernity within Brasília and the broader global modernist movement.",
     "title": "Brazilian National Congress",
     "genre": "Modernist",
-    "color": "#adeecb",
+    "color": "#58315B",
     "author": "Gustavo Leighton"
   }
 ]

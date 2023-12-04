@@ -21,6 +21,9 @@
       .text {
         display: flex;
         gap: 22px;
+        &:hover {
+          cursor: pointer;
+        }
 
         h2 {
           font-size: 112px;
