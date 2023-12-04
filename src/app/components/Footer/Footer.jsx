@@ -19,7 +19,7 @@ export default function Footer() {
   );
 
   return (
-    <div ref={container} className={styles.footerContainer}>
+    <div ref={container} className={styles.footerContainer} id="#footer">
       <div className={styles.footer}>
         <div className={styles.credits}>
           {content.map((item, index) => {

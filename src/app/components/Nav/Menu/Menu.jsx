@@ -2,9 +2,13 @@ import styles from "./menu.module.scss";
 import content from "../../../../content/content.json";
 import { motion } from "framer-motion";
 import { menuSlide, textSlide, lineAnim } from "./anim";
+import Link from "next/link";
+import Modal from "../Modal/Modal";
+import { useState } from "react";
 
 export default function Menu({}) {
   console.log(content.map((item) => item.genre));
+  const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <motion.div
       variants={menuSlide}
@@ -24,9 +28,16 @@ export default function Menu({}) {
                 initial="initial"
                 custom={index + 1}
                 className={styles.text}
+                onMouseEnter={() => {
+                  setModal({ active: true, index: index });
+                }}
+                onMouseLeave={() => {
+                  setModal({ active: false, index: index });
+                }}
               >
                 <p>( {index + 1} )</p>
                 <h2>{item.genre}</h2>
+                {/* <Link href="#footer">Link to scroll</Link> */}
               </motion.div>
               <motion.div
                 custom={index + 1}
@@ -40,6 +51,7 @@ export default function Menu({}) {
           );
         })}
       </div>
+      <Modal modal={modal} projects={content} />
     </motion.div>
   );
 }
