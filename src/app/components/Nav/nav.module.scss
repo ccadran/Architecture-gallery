@@ -9,54 +9,56 @@
 
   .menuOpener {
     z-index: 12;
-    h4 {
-      font-size: 18px;
-    }
-  }
 
-  .credit {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    p {
-      margin: 0;
-      top: 0;
-      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-    }
-    .name {
-      display: flex;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-      transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-
-      .codeBy {
-        padding-left: 0.3em;
-      }
-      .clario {
-        padding-left: 0.3em;
-      }
-      .cadran {
-        position: absolute;
-        left: 120px;
-        padding-left: 0.3em;
-      }
-    }
+    font-size: 22px;
     &:hover {
-      .name {
-        padding-right: 30px;
-        .codeBy {
-          transform: translateX(-100%);
-        }
-        .clario {
-          transform: translateX(-65px);
-        }
-        .cadran {
-          transform: translateX(-65px);
-        }
-      }
+      cursor: pointer;
     }
   }
+
+  // .credit {
+  //   display: flex;
+  //   align-items: center;
+  //   cursor: pointer;
+  //   p {
+  //     margin: 0;
+  //     top: 0;
+  //     transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+  //   }
+  //   .name {
+  //     display: flex;
+  //     overflow: hidden;
+  //     white-space: nowrap;
+  //     position: relative;
+  //     transition: all 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+
+  //     .codeBy {
+  //       padding-left: 0.3em;
+  //     }
+  //     .clario {
+  //       padding-left: 0.3em;
+  //     }
+  //     .cadran {
+  //       position: absolute;
+  //       left: 120px;
+  //       padding-left: 0.3em;
+  //     }
+  //   }
+  //   &:hover {
+  //     .name {
+  //       padding-right: 30px;
+  //       .codeBy {
+  //         transform: translateX(-100%);
+  //       }
+  //       .clario {
+  //         transform: translateX(-65px);
+  //       }
+  //       .cadran {
+  //         transform: translateX(-65px);
+  //       }
+  //     }
+  //   }
+  // }
 
   &.open {
     width: 90vw;
@@ -70,8 +72,8 @@
     .close {
       color: white;
       z-index: 13;
-      h4 {
-        font-weight: 600;
+      &:hover {
+        cursor: pointer;
       }
     }
   }
