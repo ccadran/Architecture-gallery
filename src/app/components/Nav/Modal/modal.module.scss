@@ -1,3 +1,5 @@
+@import "../../../variables.scss";
+
 .modalContainer {
   height: 300px;
   width: 450px;
@@ -22,6 +24,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: $background;
 }
 .modal img {
   height: 70%;
@@ -33,15 +36,17 @@
 .cursorLabel {
   width: 80px;
   height: 80px;
-  background-color: #455ce9;
+  background-color: $darkText;
   position: absolute;
   pointer-events: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: $clearText;
 }
 .cursorLabel {
   background-color: transparent;
+  font-size: 28px;
+  font-family: $banska;
 }

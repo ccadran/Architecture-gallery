@@ -80,7 +80,7 @@ export default function index({ modal, projects }) {
             return (
               <div
                 key={`modal_${index}`}
-                style={{ backgroundColor: color }}
+                // style={{ backgroundColor: color }}
                 className={styles.modal}
               >
                 <Image src={`${src}`} width={300} height={0} alt="image" />
