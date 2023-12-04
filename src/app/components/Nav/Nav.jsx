@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./nav.module.scss";
 import Menu from "./Menu/Menu";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { menuSlide } from "./Menu/anim";
 
 export default function Nav() {
@@ -26,7 +26,7 @@ export default function Nav() {
       </div>
       <AnimatePresence mode="wait">
         {isMenuOpen && (
-          <div
+          <motion.div
             className={styles.close}
             variants={menuSlide}
             animate="enter"
@@ -34,8 +34,8 @@ export default function Nav() {
             initial="initial"
             onClick={() => setIsMenuOpen(false)}
           >
-            <h4>close</h4>
-          </div>
+            <img src="/assets/icons/close.svg" alt="" />
+          </motion.div>
         )}
       </AnimatePresence>
       <AnimatePresence mode="wait">{isMenuOpen && <Menu />}</AnimatePresence>
