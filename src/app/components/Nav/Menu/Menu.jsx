@@ -19,6 +19,8 @@ export default function Menu({}) {
     >
       <div className={styles.genres}>
         {content.map((item, index) => {
+          const isLastItem = index === content.length - 1;
+
           return (
             <div className={styles.genre}>
               <motion.div
@@ -39,18 +41,22 @@ export default function Menu({}) {
                 <h2>{item.genre}</h2>
                 {/* <Link href="#footer">Link to scroll</Link> */}
               </motion.div>
-              <motion.div
-                custom={index + 1}
-                variants={lineAnim}
-                animate="enter"
-                exit="exit"
-                initial="initial"
-                className={styles.line}
-              ></motion.div>
+
+              {!isLastItem && (
+                <motion.div
+                  custom={index + 1}
+                  variants={lineAnim}
+                  animate="enter"
+                  exit="exit"
+                  initial="initial"
+                  className={styles.line}
+                ></motion.div>
+              )}
             </div>
           );
         })}
       </div>
+
       <Modal modal={modal} projects={content} />
     </motion.div>
   );
