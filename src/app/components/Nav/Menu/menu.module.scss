@@ -6,11 +6,13 @@
   position: fixed;
   z-index: 10;
   top: 0;
-  padding: 10vh 60px 0 60px;
+  // padding: 10vh 60px 0 60px;
+  display: flex;
+  justify-content: center;
 
   .genres {
     display: flex;
-    width: 90vw;
+    width: 95vw;
     height: 85%;
     flex-direction: column;
     justify-content: space-between;

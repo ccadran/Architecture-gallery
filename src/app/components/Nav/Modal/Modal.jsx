@@ -53,15 +53,15 @@ export default function index({ modal, projects }) {
     });
 
     window.addEventListener("mousemove", (e) => {
-      const { pageX, pageY } = e;
-      // console.log("Mouse X:", pageX, "Mouse Y:", pageY);
+      const { x, y } = e;
+      console.log(e);
 
-      moveContainerX(pageX);
-      moveContainerY(pageY);
-      moveCursorX(pageX);
-      moveCursorY(pageY);
-      moveCursorLabelX(pageX);
-      moveCursorLabelY(pageY);
+      moveContainerX(x);
+      moveContainerY(y);
+      moveCursorX(x);
+      moveCursorY(y);
+      moveCursorLabelX(x);
+      moveCursorLabelY(y);
     });
   }, []);
 

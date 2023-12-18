@@ -7,7 +7,7 @@ import Modal from "../Modal/Modal";
 import { useState } from "react";
 
 export default function Menu({}) {
-  console.log(content.map((item) => item.genre));
+  // console.log(content.map((item) => item.genre));
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
     <motion.div
