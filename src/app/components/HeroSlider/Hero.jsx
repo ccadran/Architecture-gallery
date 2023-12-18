@@ -5,6 +5,7 @@ import NextImageSlider from "./NextImageSlider/NextImageSlider";
 import HeroSlider from "../HeroSlider/Hero";
 import styles from "./hero.module.scss";
 import Image from "next/image";
+import TextHover from "../TextHover/TextHover";
 
 export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -52,10 +53,14 @@ export default function Hero() {
         <div className={styles.controller}>
           <div className={styles.controllerPrev} onClick={prevSlide}>
             <Image src="/assets/icons/left-arrow.svg" width="25" height="25" />
-            <p>See last one</p>
+            <p>
+              <TextHover text="See last one" />
+            </p>{" "}
           </div>
           <div className={styles.controllerNext} onClick={nextSlide}>
-            <p>See next one</p>
+            <p>
+              <TextHover text="See next one" />
+            </p>
             <Image src="/assets/icons/right-arrow.svg" width="25" height="25" />
           </div>
         </div>

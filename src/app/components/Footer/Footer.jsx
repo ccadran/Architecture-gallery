@@ -2,6 +2,7 @@ import { useRef } from "react";
 import styles from "./footer.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import content from "../../../content/content.json";
+import TextHover from "../TextHover/TextHover";
 
 export default function Footer() {
   const container = useRef(null);
@@ -17,6 +18,13 @@ export default function Footer() {
   const heights = [...Array(numColumns)].map((_, index) =>
     useTransform(scrollYProgress, [0, 1], [`${100 + index * 25}vh`, "0vh"])
   );
+
+  const handleColumnAnimationComplete = () => {
+    console.log("test");
+    // À la fin de l'animation des colonnes, ajustez le z-index de footerColumnContainer
+    // pour qu'il soit affiché au-dessus du contenu
+    document.querySelector(".footerColumnContainer").style.zIndex = 1;
+  };
 
   return (
     <div ref={container} className={styles.footerContainer} id="#footer">
@@ -39,13 +47,24 @@ export default function Footer() {
           </div>
           <h2>Designed and developed by Clario Cadran</h2>
           <div className={styles.socials}>
-            <a href="https://github.com/ccadran">Linkedin</a>
-            <a href="https://github.com/ccadran">GitHub</a>
-            <a href="https://github.com/ccadran">Instagram</a>
+            <a href="https://github.com/ccadran">
+              <TextHover text="Linkedin" />
+            </a>
+            <a href="https://github.com/ccadran">
+              {" "}
+              <TextHover text="GitHub" />
+            </a>
+            <a href="https://github.com/ccadran">
+              {" "}
+              <TextHover text="Instagram" />
+            </a>
           </div>
         </div>
       </div>
-      <motion.div className={styles.footerColumnContainer}>
+      <motion.div
+        className={styles.footerColumnContainer}
+        onAnimationComplete={() => console.log("test")}
+      >
         {heights.map((height, index) => (
           <FooterColumn key={index} height={height} />
         ))}

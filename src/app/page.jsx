@@ -24,7 +24,6 @@ export default function Home() {
   // }, []);
   return (
     <main className={styles.main}>
-      <TextHover text="test" />
       <Nav />
       <HeroSlider />
       <Description />

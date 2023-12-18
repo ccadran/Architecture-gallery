@@ -1,3 +1,4 @@
+// textHover.js
 import styles from "./textHover.module.scss";
 import { useRef, useEffect } from "react";
 
@@ -6,9 +7,6 @@ export default function TextHover({ text }) {
 
   useEffect(() => {
     const allowedCharacters = [
-      ...Array.from({ length: 26 }, (_, i) =>
-        String.fromCharCode("A".charCodeAt(0) + i)
-      ),
       ...Array.from({ length: 26 }, (_, i) =>
         String.fromCharCode("a".charCodeAt(0) + i)
       ),
@@ -21,7 +19,6 @@ export default function TextHover({ text }) {
       "+",
     ];
 
-    //Get random character
     function getRandomCharacter() {
       const randomIndex = Math.floor(Math.random() * allowedCharacters.length);
       return allowedCharacters[randomIndex];
@@ -54,7 +51,7 @@ export default function TextHover({ text }) {
             if (nextIndex === originalText.length) {
               isInProgress = false;
             }
-          }, i * 80);
+          }, i * 30);
         }
       };
     }
@@ -71,11 +68,11 @@ export default function TextHover({ text }) {
         element.removeEventListener("mouseover", eventHandler);
       }
     };
-  }, []);
+  }, [text]);
 
   return (
-    <div className={styles.textHover}>
-      <h1 ref={textRef}>{text}</h1>
+    <div className={styles.textHover} ref={textRef}>
+      {text}
     </div>
   );
 }

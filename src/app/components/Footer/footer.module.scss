@@ -6,6 +6,8 @@
   .footer {
     height: 100vh;
     display: flex;
+    z-index: 2;
+    position: relative;
     // flex-wrap: wrap;
     .credits {
       padding: 60px;
@@ -19,6 +21,7 @@
           width: 125px;
           height: 125px;
           margin-right: 22px;
+          margin-bottom: 12px;
           img {
             width: 100%;
             height: 100%;
@@ -67,6 +70,7 @@
     height: 100vh;
     width: 100vw;
     top: 0;
+    z-index: 3;
     // opacity: 0.5;
     display: flex;
     .footerColumn {

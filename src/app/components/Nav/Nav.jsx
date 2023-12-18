@@ -3,21 +3,17 @@ import styles from "./nav.module.scss";
 import Menu from "./Menu/Menu";
 import { AnimatePresence, motion } from "framer-motion";
 import { menuSlide } from "./Menu/anim";
+import TextHover from "../TextHover/TextHover";
 
 export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
-    
-      // Always hide overflow-x
-      document.body.style.overflowX = "hidden";
-  
-      // Disable scrolling for the entire body only when the menu is open
-      document.body.style.overflowY = isMenuOpen ? "hidden" : "auto";
-    
-  
-  
+    // Always hide overflow-x
+    document.body.style.overflowX = "hidden";
+
+    // Disable scrolling for the entire body only when the menu is open
+    document.body.style.overflowY = isMenuOpen ? "hidden" : "auto";
   }, [isMenuOpen]);
-  
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,7 +23,7 @@ export default function Nav() {
   return (
     <div className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
       <h4 className={styles.menuOpener} onClick={() => toggleMenu()}>
-        ( Menu )
+        <TextHover text="( Menu )" />
       </h4>
 
       <AnimatePresence mode="wait">
