@@ -11,6 +11,7 @@ import gsap from "gsap";
 import { useEffect, useState } from "react";
 import Lenis from "@studio-freight/lenis";
 import Footer from "./components/Footer/Footer";
+import TextHover from "./components/TextHover/TextHover";
 
 export default function Home() {
   // useEffect(() => {
@@ -23,6 +24,7 @@ export default function Home() {
   // }, []);
   return (
     <main className={styles.main}>
+      <TextHover text="test" />
       <Nav />
       <HeroSlider />
       <Description />

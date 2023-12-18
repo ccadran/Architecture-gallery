@@ -1,0 +1,13 @@
+.textHover {
+  position: absolute;
+  background-color: white;
+  width: 100vw;
+  height: 50vw;
+  z-index: 150;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 64px;
+  }
+}
