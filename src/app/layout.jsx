@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     // Always hide overflow-x
     document.body.style.overflowX = "hidden";
 
-    // Disable scrolling for the entire body only when the page
+    // Disable scrolling for the entire body only when the page is loading
     document.body.style.overflowY = isLoading ? "hidden" : "auto";
     setTimeout(() => {
       setIsLoading(false);

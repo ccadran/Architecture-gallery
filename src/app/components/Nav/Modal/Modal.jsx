@@ -51,18 +51,20 @@ export default function Modal({ modal, projects }) {
       duration: 0.45,
       ease: "power3",
     });
+    if (typeof window !== "undefined") {
+      // Your code that uses `window` here
+      window.addEventListener("mousemove", (e) => {
+        const { x, y } = e;
+        console.log(e);
 
-    window.addEventListener("mousemove", (e) => {
-      const { x, y } = e;
-      console.log(e);
-
-      moveContainerX(x);
-      moveContainerY(y);
-      moveCursorX(x);
-      moveCursorY(y);
-      moveCursorLabelX(x);
-      moveCursorLabelY(y);
-    });
+        moveContainerX(x);
+        moveContainerY(y);
+        moveCursorX(x);
+        moveCursorY(y);
+        moveCursorLabelX(x);
+        moveCursorLabelY(y);
+      });
+    }
   }, []);
 
   return (
