@@ -6,12 +6,21 @@
   padding: 0 60px;
   margin-top: 122px;
   height: 650vh;
+  @media screen and (max-width: 640px) {
+    padding: 0 30px;
+  }
   h2 {
     margin-bottom: 112px;
     font-size: 54px;
+    @media screen and (max-width: 640px) {
+      font-size: 44px;
+    }
   }
   p {
     font-size: 36px;
+    @media screen and (max-width: 640px) {
+      font-size: 26px;
+    }
   }
 }
 .description {

@@ -29,6 +29,9 @@
   justify-content: space-between;
   padding: 0 60px 30px 60px;
   cursor: pointer;
+  @media screen and (max-width: 440px) {
+    padding: 0 20px 30px 20px;
+  }
   p {
     font-family: $banska;
     font-weight: bold;
@@ -39,6 +42,9 @@
     align-items: center;
     p {
       margin-left: 10px;
+      @media screen and (max-width: 440px) {
+        margin-left: 5px;
+      }
     }
   }
   .controllerNext {
@@ -46,6 +52,9 @@
     align-items: center;
     p {
       margin-right: 10px;
+      @media screen and (max-width: 440px) {
+        margin-right: 5px;
+      }
     }
   }
 }
