@@ -15,7 +15,7 @@ export default function Description() {
   const height = useTransform(scrollYProgress, [0.9, 1], [50, 0]);
 
   const description = `Let's explore the diversity of architectural trends through five of them.
-    Blobism" embodies an organic, fluid approach, "High Tech" is the result of a fusion between technology and design, "Modernist" symbolizes minimalism in architecture, "Brutalism" adopts a robust, raw aesthetic, and "Metabolism" expresses a futuristic vision of architecture, based on the idea of organic, evolving structures.
+    "Blobism" embodies an organic, fluid approach, "High Tech" is the result of a fusion between technology and design, "Modernist" symbolizes minimalism in architecture, "Brutalism" adopts a robust, raw aesthetic, and "Metabolism" expresses a futuristic vision of architecture, based on the idea of organic, evolving structures.
     Let's scroll to discover an example of each of them !`;
   const descriptionSplit = description.split("");
 

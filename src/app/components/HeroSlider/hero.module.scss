@@ -13,11 +13,15 @@
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+  @media screen and (max-width: 1000px) {
+    width: 100vw;
+  }
 }
 
 .nextContent {
-  // width: 50vw;
-  // height: 100vh;
+  @media screen and (max-width: 1000px) {
+    display: none;
+  }
 }
 
 .controller {
