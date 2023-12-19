@@ -4,6 +4,12 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import content from "../../../content/content.json";
 import TextHover from "../TextHover/TextHover";
 
+const calculateHeights = (scrollYProgress, numColumns) => {
+  return [...Array(numColumns)].map((_, index) =>
+    useTransform(scrollYProgress, [0, 1], [`${100 + index * 25}vh`, "0vh"])
+  );
+};
+
 export default function Footer() {
   const container = useRef(null);
 
@@ -15,9 +21,7 @@ export default function Footer() {
   const numColumns = 10;
 
   // Utilisez la propriété 'map' pour créer une valeur spécifique pour chaque colonne
-  const heights = [...Array(numColumns)].map((_, index) =>
-    useTransform(scrollYProgress, [0, 1], [`${100 + index * 25}vh`, "0vh"])
-  );
+  const heights = calculateHeights(scrollYProgress, numColumns);
 
   const handleColumnAnimationComplete = () => {
     console.log("test");
