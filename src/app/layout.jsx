@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
     }, 3250);
   }, [isLoading]);
 
-  const locomotiveScroll = new LocomotiveScroll();
+  // const locomotiveScroll = new LocomotiveScroll();
 
   return (
     <html lang="en">
