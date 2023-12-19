@@ -32,7 +32,7 @@ export default function Footer() {
         <div className={styles.credits}>
           {content.map((item, index) => {
             return (
-              <div className={styles.credit}>
+              <div className={styles.credit} key={index}>
                 <div className={styles.imgContainer}>
                   <img src={item.src} alt="" />
                 </div>

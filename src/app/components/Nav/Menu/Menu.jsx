@@ -22,7 +22,7 @@ export default function Menu({}) {
           const isLastItem = index === content.length - 1;
 
           return (
-            <div className={styles.genre}>
+            <div className={styles.genre} key={index}>
               <motion.div
                 variants={textSlide}
                 animate="enter"
