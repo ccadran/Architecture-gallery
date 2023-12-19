@@ -14,8 +14,9 @@ export default function Description() {
   });
   const height = useTransform(scrollYProgress, [0.9, 1], [50, 0]);
 
-  const description =
-    "Lorem ipsum dolor sit amet consectetur. Tristique porta mauris at duis bibendum purus nisl aliquet ullamcorper. Scelerisque eget lectus justo nibh libero ultricies scelerisque lectus blandit. Nulla fringilla tincidunt diam malesuada dui. Tellus phasellus id sit pharetra eget. Odio imperdiet nullam eget vel laoreet aliquam tellus.";
+  const description = `Let's explore the diversity of architectural trends through five of them.
+    Blobism" embodies an organic, fluid approach, "High Tech" is the result of a fusion between technology and design, "Modernist" symbolizes minimalism in architecture, "Brutalism" adopts a robust, raw aesthetic, and "Metabolism" expresses a futuristic vision of architecture, based on the idea of organic, evolving structures.
+    Let's scroll to discover an example of each of them !`;
   const descriptionSplit = description.split("");
 
   useLayoutEffect(() => {
