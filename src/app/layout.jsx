@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import "./globals.scss";
 import Preloader from "./components/Preloader/Loader";
 import { AnimatePresence } from "framer-motion";
-import LocomotiveScroll from "locomotive-scroll";
+// import LocomotiveScroll from "locomotive-scroll";
 
 export default function RootLayout({ children }) {
   const [isLoading, setIsLoading] = useState(true);
