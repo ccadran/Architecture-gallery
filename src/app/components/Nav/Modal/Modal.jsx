@@ -53,8 +53,8 @@ export default function Modal({ modal, projects }) {
       duration: 0.45,
       ease: "power3",
     });
-    if (typeof window !== "undefined") {
-      // Your code that uses `window` here
+    if (process.browser) {
+      // This code will only run on the client side
       window.addEventListener("mousemove", (e) => {
         const { x, y } = e;
         console.log(e);
