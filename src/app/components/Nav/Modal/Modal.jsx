@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import styles from "./modal.module.scss";
 import Image from "next/image";
