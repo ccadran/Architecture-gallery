@@ -20,7 +20,10 @@ export default function RootLayout({ children }) {
     }, 3250);
   }, [isLoading]);
   useEffect(() => {
-    const locomotiveScroll = new LocomotiveScroll();
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
   }, []);
 
   return (
