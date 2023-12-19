@@ -30,6 +30,15 @@
         h2 {
           font-size: 112px;
           font-weight: 500;
+          @media screen and (max-width: 740px) {
+            font-size: 88px;
+          }
+          @media screen and (max-width: 580px) {
+            font-size: 72px;
+          }
+          @media screen and (max-width: 480px) {
+            font-size: 54px;
+          }
         }
       }
       .line {

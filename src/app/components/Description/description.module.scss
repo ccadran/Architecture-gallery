@@ -48,6 +48,13 @@
     .imageContainer {
       width: 26%;
       height: 30%;
+      @media screen and (max-width: 1040px) {
+        width: 46%;
+        height: 50%;
+      }
+      @media screen and (max-width: 740px) {
+        width: 70vw;
+      }
       img {
         object-fit: cover;
         height: 100%;
