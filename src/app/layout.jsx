@@ -6,13 +6,19 @@ import Preloader from "./components/Preloader/Loader";
 import { AnimatePresence } from "framer-motion";
 
 export default function RootLayout({ children }) {
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // setTimeout(() => {
-    //   setIsLoading(false);
-    // }, 3250);
-  });
+    // Always hide overflow-x
+    document.body.style.overflowX = "hidden";
+
+    // Disable scrolling for the entire body only when the page
+    document.body.style.overflowY = isLoading ? "hidden" : "auto";
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 3250);
+  }, [isLoading]);
+
   return (
     <html lang="en">
       <body>
