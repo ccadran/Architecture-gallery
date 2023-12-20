@@ -6,6 +6,9 @@
 body {
   background-color: $background;
   overflow-x: hidden;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   h1,
   h2,
