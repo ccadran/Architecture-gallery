@@ -42,7 +42,7 @@ export default function Description() {
     <>
       <div ref={descriptionRef} className={styles.descriptionContainer}>
         <div className={styles.description}>
-          <h2>L'architecture à travers 5 courants</h2>
+          <h2>Architecture through 5 movements</h2>
           <p className={styles.descriptionText}>
             {descriptionSplit.map((child, index) => (
               <span key={index}>{child}</span>
