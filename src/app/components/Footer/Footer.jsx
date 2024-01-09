@@ -23,16 +23,17 @@ export default function Footer() {
 
   const heights = calculateHeights(scrollYProgress, numColumns);
 
-  window.addEventListener("scroll", () => {
-    console.log(scrollYProgress.current);
+  if (process.browser) {
+    window.addEventListener("scroll", () => {
+      console.log(scrollYProgress.current);
 
-    if (scrollYProgress.current > 0.95) {
-      gsap.set(`.${styles.footerColumnContainer} `, { zIndex: 1 });
-    } else if (scrollYProgress.current < 0.95) {
-      gsap.set(`.${styles.footerColumnContainer} `, { zIndex: 3 });
-    }
-  });
-
+      if (scrollYProgress.current > 0.95) {
+        gsap.set(`.${styles.footerColumnContainer} `, { zIndex: 1 });
+      } else if (scrollYProgress.current < 0.95) {
+        gsap.set(`.${styles.footerColumnContainer} `, { zIndex: 3 });
+      }
+    });
+  }
   return (
     <div ref={container} className={styles.footerContainer} id="#footer">
       <div className={styles.footer}>
