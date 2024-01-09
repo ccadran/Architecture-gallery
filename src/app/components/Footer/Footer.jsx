@@ -1,8 +1,12 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./footer.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import content from "../../../content/content.json";
 import TextHover from "../TextHover/TextHover";
+
+const footerColumns = document.querySelector(
+  `.${styles.footerColumnContainer}`
+);
 
 const calculateHeights = (scrollYProgress, numColumns) => {
   return [...Array(numColumns)].map((_, index) =>
@@ -20,8 +24,15 @@ export default function Footer() {
 
   const numColumns = 10;
 
-  // Utilisez la propriété 'map' pour créer une valeur spécifique pour chaque colonne
   const heights = calculateHeights(scrollYProgress, numColumns);
+
+  window.addEventListener("scroll", () => {
+    console.log(scrollYProgress.current);
+
+    if (scrollYProgress.current === 1) {
+      footerColumns.style.zIndex = "1";
+    }
+  });
 
   const handleColumnAnimationComplete = () => {
     console.log("test");
