@@ -51,18 +51,18 @@ export default function Hero() {
           isNext={isNext}
         />
         <div className={styles.controller}>
-          <div className={styles.controllerPrev} onClick={prevSlide}>
+          <button className={styles.controllerPrev} onClick={prevSlide}>
             <Image src="/assets/icons/left-arrow.svg" width="25" height="25" />
             <p>
               <TextHover text="See last one" />
             </p>{" "}
-          </div>
-          <div className={styles.controllerNext} onClick={nextSlide}>
+          </button>
+          <button className={styles.controllerNext} onClick={nextSlide}>
             <p>
               <TextHover text="See next one" />
             </p>
             <Image src="/assets/icons/right-arrow.svg" width="25" height="25" />
-          </div>
+          </button>
         </div>
       </div>
       <div className={styles.nextContent}>

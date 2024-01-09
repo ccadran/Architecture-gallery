@@ -38,6 +38,8 @@
     font-size: 18px;
   }
   .controllerPrev {
+    border: none;
+
     display: flex;
     align-items: center;
     p {
@@ -50,6 +52,8 @@
   .controllerNext {
     display: flex;
     align-items: center;
+    border: none;
+
     p {
       margin-right: 10px;
       @media screen and (max-width: 440px) {

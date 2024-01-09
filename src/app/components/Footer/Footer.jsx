@@ -3,10 +3,7 @@ import styles from "./footer.module.scss";
 import { motion, useScroll, useTransform } from "framer-motion";
 import content from "../../../content/content.json";
 import TextHover from "../TextHover/TextHover";
-
-const footerColumns = document.querySelector(
-  `.${styles.footerColumnContainer}`
-);
+import gsap from "gsap";
 
 const calculateHeights = (scrollYProgress, numColumns) => {
   return [...Array(numColumns)].map((_, index) =>
@@ -29,17 +26,12 @@ export default function Footer() {
   window.addEventListener("scroll", () => {
     console.log(scrollYProgress.current);
 
-    if (scrollYProgress.current === 1) {
-      footerColumns.style.zIndex = "1";
+    if (scrollYProgress.current > 0.95) {
+      gsap.set(`.${styles.footerColumnContainer} `, { zIndex: 1 });
+    } else if (scrollYProgress.current < 0.95) {
+      gsap.set(`.${styles.footerColumnContainer} `, { zIndex: 3 });
     }
   });
-
-  const handleColumnAnimationComplete = () => {
-    console.log("test");
-    // À la fin de l'animation des colonnes, ajustez le z-index de footerColumnContainer
-    // pour qu'il soit affiché au-dessus du contenu
-    document.querySelector(".footerColumnContainer").style.zIndex = 1;
-  };
 
   return (
     <div ref={container} className={styles.footerContainer} id="#footer">
@@ -76,10 +68,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <motion.div
-        className={styles.footerColumnContainer}
-        onAnimationComplete={() => console.log("test")}
-      >
+      <motion.div className={styles.footerColumnContainer}>
         {heights.map((height, index) => (
           <FooterColumn key={index} height={height} />
         ))}
